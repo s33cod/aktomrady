@@ -58,10 +58,13 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         brand: {
+          cyan: "hsl(var(--brand-cyan))",
+          magenta: "hsl(var(--brand-magenta))",
+          yellow: "hsl(var(--brand-yellow))",
           blue: "hsl(var(--brand-blue))",
-          "light-blue": "hsl(var(--brand-light-blue))",
           "gradient-from": "hsl(var(--brand-gradient-from))",
           "gradient-to": "hsl(var(--brand-gradient-to))",
+          "gradient-accent": "hsl(var(--brand-gradient-accent))",
         },
       },
       borderRadius: {
