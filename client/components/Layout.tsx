@@ -58,15 +58,15 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/"
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
-                  isActiveLink('/')
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                    : 'text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta'
+                  isActiveLink("/")
+                    ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Home
                   size={18}
                   className={`transition-colors ${
-                    isActiveLink('/') ? 'text-white' : 'group-hover:text-white'
+                    isActiveLink("/") ? "text-white" : "group-hover:text-white"
                   }`}
                 />
                 <span>Home</span>
@@ -74,15 +74,17 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/services"
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
-                  isActiveLink('/services')
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                    : 'text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta'
+                  isActiveLink("/services")
+                    ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Briefcase
                   size={18}
                   className={`transition-colors ${
-                    isActiveLink('/services') ? 'text-white' : 'group-hover:text-white'
+                    isActiveLink("/services")
+                      ? "text-white"
+                      : "group-hover:text-white"
                   }`}
                 />
                 <span>Services</span>
@@ -90,15 +92,17 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/portfolio"
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
-                  isActiveLink('/portfolio')
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                    : 'text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta'
+                  isActiveLink("/portfolio")
+                    ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Award
                   size={18}
                   className={`transition-colors ${
-                    isActiveLink('/portfolio') ? 'text-white' : 'group-hover:text-white'
+                    isActiveLink("/portfolio")
+                      ? "text-white"
+                      : "group-hover:text-white"
                   }`}
                 />
                 <span>Portfolio</span>
@@ -106,15 +110,17 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/about"
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
-                  isActiveLink('/about')
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                    : 'text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta'
+                  isActiveLink("/about")
+                    ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Users
                   size={18}
                   className={`transition-colors ${
-                    isActiveLink('/about') ? 'text-white' : 'group-hover:text-white'
+                    isActiveLink("/about")
+                      ? "text-white"
+                      : "group-hover:text-white"
                   }`}
                 />
                 <span>About</span>
@@ -122,9 +128,9 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/contact"
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
-                  isActiveLink('/contact')
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                    : 'text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta'
+                  isActiveLink("/contact")
+                    ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Phone

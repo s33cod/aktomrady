@@ -589,7 +589,8 @@ export default function Contact() {
             {[
               {
                 city: "Lagos Office",
-                address: "5, Kayode Street, Ogba, Lagos Mainland, OGBA LAGOS, Nigeria",
+                address:
+                  "5, Kayode Street, Ogba, Lagos Mainland, OGBA LAGOS, Nigeria",
                 phone: "+234.8029477796",
                 hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
               },
