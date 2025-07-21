@@ -29,6 +29,18 @@
     <link rel="icon" type="image/png" href="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=32" />
     <link rel="apple-touch-icon" href="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=180" />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8536524404879782" crossorigin="anonymous"></script>
+
     <!-- Business Schema -->
     <script type="application/ld+json">
     {
@@ -42,8 +54,13 @@
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "5, Kayode Street, Ogba",
+        "addressLocality": "Lagos",
+        "addressRegion": "Lagos State",
         "addressCountry": "Nigeria"
       },
+      "telephone": "+234.8029477796",
+      "email": "info@aktomrady.com",
       "serviceArea": {
         "@type": "Country",
         "name": "Nigeria"
