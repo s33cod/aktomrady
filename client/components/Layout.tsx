@@ -129,38 +129,159 @@ export default function Layout({ children }: LayoutProps) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-gray-400">
-                Copyright 2025 © Aktomrady.com. All Rights Reserved
+          {/* Main Footer Content */}
+          <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="col-span-1 lg:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=800"
+                  alt="AKTOMRADY Agencies Logo"
+                  className="w-10 h-10 object-contain"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold leading-tight">AKTOMRADY</span>
+                  <span className="text-sm text-gray-400 leading-tight">AGENCIES (W.I.G)</span>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6 max-w-md">
+                Nigeria's trusted printing partner offering premium quality large format prints,
+                custom branded items, business materials, and comprehensive printing solutions
+                for government agencies, corporations, and individuals.
               </p>
+              <div className="space-y-2 text-sm">
+                <p className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  Trusted by Lagos State Government
+                </p>
+                <p className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  Serving Major Banks & Corporations
+                </p>
+                <p className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  1000+ Happy Clients Nationwide
+                </p>
+              </div>
             </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={20} />
-              </a>
+
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
+              <div className="space-y-4 text-sm">
+                <div>
+                  <p className="text-gray-400 mb-1">Phone Numbers:</p>
+                  <p className="text-white">+234 813 4466 334</p>
+                  <p className="text-white">+234 902 345 6789</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 mb-1">Email:</p>
+                  <p className="text-white">info@aktomrady.com</p>
+                  <p className="text-white">orders@aktomrady.com</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 mb-1">Business Hours:</p>
+                  <p className="text-white">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                  <p className="text-white">Sat: 9:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Office Locations */}
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Our Offices</h3>
+              <div className="space-y-4 text-sm">
+                <div>
+                  <p className="text-gray-400 mb-1">Lagos Office:</p>
+                  <p className="text-white">Plot 123, Victoria Island</p>
+                  <p className="text-white">Lagos State, Nigeria</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 mb-1">Abuja Office:</p>
+                  <p className="text-white">Suite 45, Central Business District</p>
+                  <p className="text-white">Abuja, FCT, Nigeria</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 mb-1">Port Harcourt Office:</p>
+                  <p className="text-white">67 Trans Amadi Road</p>
+                  <p className="text-white">Rivers State, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="py-6 border-t border-gray-800">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">Services</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Large Format Prints</Link></li>
+                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Business Cards</Link></li>
+                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Wedding Invitations</Link></li>
+                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Custom Branded Items</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">Company</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link to="/portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</Link></li>
+                  <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">Support</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="tel:+2348134466334" className="text-gray-400 hover:text-white transition-colors">Call Support</a></li>
+                  <li><a href="mailto:support@aktomrady.com" className="text-gray-400 hover:text-white transition-colors">Email Support</a></li>
+                  <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Get Quote</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">Follow Us</h4>
+                <div className="flex space-x-3">
+                  <a
+                    href="#"
+                    className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook size={16} />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram size={16} />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
+                    aria-label="WhatsApp"
+                  >
+                    <MessageCircle size={16} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="py-6 border-t border-gray-800">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="mb-4 md:mb-0">
+                <p className="text-sm text-gray-400">
+                  Copyright 2025 © AKTOMRADY Agencies. All Rights Reserved
+                </p>
+              </div>
+              <div className="flex space-x-6 text-sm">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Sitemap</a>
+              </div>
             </div>
           </div>
         </div>
