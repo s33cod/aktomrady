@@ -589,23 +589,21 @@ export default function Contact() {
             {[
               {
                 city: "Lagos Office",
-                address: "Plot 123, Victoria Island, Lagos State, Nigeria",
-                phone: "+234 813 4466 334",
+                address: "5, Kayode Street, Ogba, Lagos Mainland, OGBA LAGOS, Nigeria",
+                phone: "+234.8029477796",
                 hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
               },
               {
                 city: "Abuja Office",
-                address:
-                  "Suite 45, Central Business District, Abuja, FCT, Nigeria",
-                phone: "+234 902 345 6789",
-                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
+                address: "Coming Soon",
+                phone: "+234.8029477796",
+                hours: "Coming Soon",
               },
               {
                 city: "Port Harcourt Office",
-                address:
-                  "67 Trans Amadi Road, Port Harcourt, Rivers State, Nigeria",
-                phone: "+234 708 123 4567",
-                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
+                address: "Coming Soon",
+                phone: "+234.8029477796",
+                hours: "Coming Soon",
               },
             ].map((office, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
