@@ -173,13 +173,24 @@ export default function Layout({ children }: LayoutProps) {
               <div className="space-y-4 text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Phone Numbers:</p>
-                  <p className="text-white">+234 813 4466 334</p>
-                  <p className="text-white">+234 902 345 6789</p>
+                  <p className="text-white">
+                    <a href="tel:+2348029477796" className="hover:text-brand-cyan transition-colors">
+                      +234.8029477796
+                    </a>
+                  </p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Email:</p>
-                  <p className="text-white">info@aktomrady.com</p>
-                  <p className="text-white">orders@aktomrady.com</p>
+                  <p className="text-white">
+                    <a href="mailto:info@aktomrady.com" className="hover:text-brand-cyan transition-colors">
+                      info@aktomrady.com
+                    </a>
+                  </p>
+                  <p className="text-white">
+                    <a href="mailto:aktomradyagencies@yahoo.com" className="hover:text-brand-cyan transition-colors">
+                      aktomradyagencies@yahoo.com
+                    </a>
+                  </p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Business Hours:</p>
