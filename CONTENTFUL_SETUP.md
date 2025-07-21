@@ -11,6 +11,7 @@ This document outlines how to set up Contentful CMS for managing digital assets 
 ## 2. Content Types to Create
 
 ### Project Content Type
+
 - **ID**: `project`
 - **Fields**:
   - Title (Short text)
@@ -23,6 +24,7 @@ This document outlines how to set up Contentful CMS for managing digital assets 
   - Services (Short text, multiple)
 
 ### Service Content Type
+
 - **ID**: `service`
 - **Fields**:
   - Title (Short text, required)
@@ -33,6 +35,7 @@ This document outlines how to set up Contentful CMS for managing digital assets 
   - Popular (Boolean)
 
 ### Team Member Content Type
+
 - **ID**: `teamMember`
 - **Fields**:
   - Name (Short text, required)
@@ -42,6 +45,7 @@ This document outlines how to set up Contentful CMS for managing digital assets 
   - Photo (Media)
 
 ### Testimonial Content Type
+
 - **ID**: `testimonial`
 - **Fields**:
   - Client Name (Short text, required)
@@ -70,7 +74,7 @@ CONTENTFUL_ACCESS_TOKEN=your_access_token_here
 ## 5. Usage in Components
 
 ```typescript
-import { contentfulClient } from '@/lib/contentful';
+import { contentfulClient } from "@/lib/contentful";
 
 // Get all projects
 const projects = await contentfulClient.getProjects();

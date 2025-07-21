@@ -12,10 +12,10 @@ export default function Index() {
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     console.log("Email submitted:", email);
     setEmail("");
     setIsSubmitting(false);
@@ -25,7 +25,7 @@ export default function Index() {
     <Layout>
       {/* Hero Showreel Section */}
       <HeroShowreel />
-      
+
       {/* Services Preview Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,8 +34,9 @@ export default function Index() {
               Our Comprehensive Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From large format displays to intimate wedding invitations, we provide
-              premium printing solutions trusted by government agencies and major corporations.
+              From large format displays to intimate wedding invitations, we
+              provide premium printing solutions trusted by government agencies
+              and major corporations.
             </p>
           </div>
 
@@ -43,28 +44,36 @@ export default function Index() {
             {[
               {
                 title: "Large Format Prints",
-                description: "Premium banners, billboards & sharp quality product stickers",
-                icon: "📢"
+                description:
+                  "Premium banners, billboards & sharp quality product stickers",
+                icon: "📢",
               },
               {
                 title: "Custom Branded Items",
-                description: "Personalized corporate gifts & promotional souvenirs",
-                icon: "🎁"
+                description:
+                  "Personalized corporate gifts & promotional souvenirs",
+                icon: "🎁",
               },
               {
                 title: "Wedding Invitations",
-                description: "Elegant invitations for weddings & special events",
-                icon: "💌"
+                description:
+                  "Elegant invitations for weddings & special events",
+                icon: "💌",
               },
               {
                 title: "Business Materials",
                 description: "Professional business cards, flyers & brochures",
-                icon: "💼"
-              }
+                icon: "💼",
+              },
             ].map((service, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
@@ -80,8 +89,9 @@ export default function Index() {
               🌟 Trusted by Major Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We're proud to serve some of Nigeria's most prestigious organizations,
-              delivering exceptional printing solutions that meet the highest standards.
+              We're proud to serve some of Nigeria's most prestigious
+              organizations, delivering exceptional printing solutions that meet
+              the highest standards.
             </p>
           </div>
 
@@ -90,36 +100,47 @@ export default function Index() {
               {
                 title: "📌 LAGOS STATE GOVT.",
                 category: "Government Agency",
-                description: "Comprehensive printing solutions for state communications and campaigns"
+                description:
+                  "Comprehensive printing solutions for state communications and campaigns",
               },
               {
                 title: "📌 EKITI STATE GOVT.",
                 category: "Government Agency",
-                description: "State-wide printing services for administrative and public needs"
+                description:
+                  "State-wide printing services for administrative and public needs",
               },
               {
                 title: "🏠 JAADOL Homes",
                 category: "Real Estate",
-                description: "Premium property marketing materials and branding solutions"
+                description:
+                  "Premium property marketing materials and branding solutions",
               },
               {
                 title: "🏥 JAAD Hospital Needs",
                 category: "Healthcare",
-                description: "Medical forms, patient information, and healthcare communications"
+                description:
+                  "Medical forms, patient information, and healthcare communications",
               },
               {
                 title: "🏦 Polaris Bank",
                 category: "Banking",
-                description: "Corporate banking materials and customer communications"
+                description:
+                  "Corporate banking materials and customer communications",
               },
               {
                 title: "🏢 Stanbic Bank",
                 category: "Banking",
-                description: "Enterprise banking solutions and promotional materials"
-              }
+                description:
+                  "Enterprise banking solutions and promotional materials",
+              },
             ].map((client, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{client.title}</h3>
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {client.title}
+                </h3>
                 <div className="inline-block bg-brand-blue text-white text-xs px-2 py-1 rounded mb-3">
                   {client.category}
                 </div>
@@ -129,7 +150,9 @@ export default function Index() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">🏛 Plus leading Nigerian political parties and many more...</p>
+            <p className="text-gray-600 mb-4">
+              🏛 Plus leading Nigerian political parties and many more...
+            </p>
             <Button
               asChild
               className="bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90"
@@ -148,7 +171,8 @@ export default function Index() {
               Why Choose AKTOMRADY?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're Nigeria's premier printing partner, delivering excellence you can trust.
+              We're Nigeria's premier printing partner, delivering excellence
+              you can trust.
             </p>
           </div>
 
@@ -156,45 +180,56 @@ export default function Index() {
             {[
               {
                 title: "✔ Premium Quality & Sharp Prints",
-                description: "State-of-the-art equipment ensuring superior results every time",
-                icon: "🎯"
+                description:
+                  "State-of-the-art equipment ensuring superior results every time",
+                icon: "🎯",
               },
               {
                 title: "✔ Tailored Solutions for Any Order Size",
-                description: "From single pieces to bulk orders, we handle projects of all scales",
-                icon: "📏"
+                description:
+                  "From single pieces to bulk orders, we handle projects of all scales",
+                icon: "📏",
               },
               {
                 title: "✔ Affordable Prices 💸",
-                description: "Competitive pricing without compromising on quality or service",
-                icon: "💰"
+                description:
+                  "Competitive pricing without compromising on quality or service",
+                icon: "💰",
               },
               {
                 title: "✔ Fast & Reliable Delivery ⏰",
-                description: "Quick turnaround times with nationwide delivery coverage",
-                icon: "🚚"
+                description:
+                  "Quick turnaround times with nationwide delivery coverage",
+                icon: "🚚",
               },
               {
                 title: "✔ Friendly Expert Support 🤝",
-                description: "Dedicated customer service team ready to exceed your expectations",
-                icon: "👥"
+                description:
+                  "Dedicated customer service team ready to exceed your expectations",
+                icon: "👥",
               },
               {
                 title: "✔ Proven Track Record",
-                description: "1000+ satisfied clients and 5000+ successful projects completed",
-                icon: "🏆"
-              }
+                description:
+                  "1000+ satisfied clients and 5000+ successful projects completed",
+                icon: "🏆",
+              },
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="text-3xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-brand-blue to-brand-light-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -202,9 +237,10 @@ export default function Index() {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get in touch with our expert team today and let's bring your ideas to life.
+            Get in touch with our expert team today and let's bring your ideas
+            to life.
           </p>
-          <Button 
+          <Button
             size="lg"
             className="bg-white text-brand-blue hover:bg-white/90 font-semibold px-8 py-3"
           >

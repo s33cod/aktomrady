@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { MessageCircle, X, Send, Phone, Mail, Calculator, Info } from "lucide-react";
+import {
+  MessageCircle,
+  X,
+  Send,
+  Phone,
+  Mail,
+  Calculator,
+  Info,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
@@ -24,9 +32,9 @@ export default function Chatbot() {
         { text: "Get a Quote", action: "quote" },
         { text: "Our Services", action: "services" },
         { text: "Contact Info", action: "contact" },
-        { text: "Business Hours", action: "hours" }
-      ]
-    }
+        { text: "Business Hours", action: "hours" },
+      ],
+    },
   ]);
   const [currentMessage, setCurrentMessage] = useState("");
 
@@ -38,8 +46,8 @@ export default function Chatbot() {
         { text: "Business Cards", action: "business-cards" },
         { text: "Wedding Invitations", action: "wedding" },
         { text: "Custom Branded Items", action: "branded" },
-        { text: "Get Full Quote Form", action: "quote-form" }
-      ]
+        { text: "Get Full Quote Form", action: "quote-form" },
+      ],
     },
     services: {
       text: "We offer a comprehensive range of printing services! 🎨 Here are our main categories:",
@@ -48,8 +56,8 @@ export default function Chatbot() {
         { text: "Business Materials", action: "business-info" },
         { text: "Custom Branded Items", action: "branded-info" },
         { text: "Political Campaigns", action: "political-info" },
-        { text: "View All Services", action: "services-page" }
-      ]
+        { text: "View All Services", action: "services-page" },
+      ],
     },
     contact: {
       text: "Here's how you can reach us! 📞",
@@ -57,38 +65,48 @@ export default function Chatbot() {
         { text: "Call Us: +234.8029477796", action: "call" },
         { text: "Email: info@aktomrady.com", action: "email" },
         { text: "WhatsApp Us", action: "whatsapp" },
-        { text: "Visit Our Office", action: "address" }
-      ]
+        { text: "Visit Our Office", action: "address" },
+      ],
     },
     hours: {
       text: "Our business hours are: 🕒\n\nMonday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 4:00 PM\nSunday: Emergency Services Only\n\nWe're always here to help!",
       options: [
         { text: "Contact Us Now", action: "contact" },
-        { text: "Get a Quote", action: "quote" }
-      ]
-    }
+        { text: "Get a Quote", action: "quote" },
+      ],
+    },
   };
 
-  const addMessage = (text: string, isBot: boolean = false, options?: { text: string; action: string }[]) => {
+  const addMessage = (
+    text: string,
+    isBot: boolean = false,
+    options?: { text: string; action: string }[],
+  ) => {
     const newMessage: Message = {
       id: Date.now().toString(),
       text,
       isBot,
       timestamp: new Date(),
-      options
+      options,
     };
-    setMessages(prev => [...prev, newMessage]);
+    setMessages((prev) => [...prev, newMessage]);
   };
 
   const handleOptionClick = (action: string) => {
     switch (action) {
       case "quote-form":
         window.open("/quote", "_blank");
-        addMessage("I've opened our quote form in a new tab! Fill it out and we'll get back to you within 24 hours. 🚀", true);
+        addMessage(
+          "I've opened our quote form in a new tab! Fill it out and we'll get back to you within 24 hours. 🚀",
+          true,
+        );
         break;
       case "services-page":
         window.open("/services", "_blank");
-        addMessage("I've opened our services page! You can see all our printing capabilities there. 📖", true);
+        addMessage(
+          "I've opened our services page! You can see all our printing capabilities there. 📖",
+          true,
+        );
         break;
       case "call":
         window.open("tel:+2348029477796", "_self");
@@ -100,39 +118,62 @@ export default function Chatbot() {
         window.open("https://wa.me/2348029477796", "_blank");
         break;
       case "address":
-        addMessage("📍 Visit us at:\n5, Kayode Street, Ogba\nLagos Mainland, OGBA LAGOS\nNigeria\n\nWe'd love to see you!", true);
+        addMessage(
+          "📍 Visit us at:\n5, Kayode Street, Ogba\nLagos Mainland, OGBA LAGOS\nNigeria\n\nWe'd love to see you!",
+          true,
+        );
         break;
       case "large-format":
-        addMessage("Great choice! 📢 Our large format printing includes banners, billboards, and high-quality stickers. What size do you need?", true, [
-          { text: "Get Quote for Large Format", action: "quote-form" },
-          { text: "Learn More", action: "services-page" }
-        ]);
+        addMessage(
+          "Great choice! 📢 Our large format printing includes banners, billboards, and high-quality stickers. What size do you need?",
+          true,
+          [
+            { text: "Get Quote for Large Format", action: "quote-form" },
+            { text: "Learn More", action: "services-page" },
+          ],
+        );
         break;
       case "business-cards":
-        addMessage("Perfect! 💼 We create professional business cards that make lasting impressions. What quantity do you need?", true, [
-          { text: "Get Business Card Quote", action: "quote-form" },
-          { text: "See Our Work", action: "portfolio" }
-        ]);
+        addMessage(
+          "Perfect! 💼 We create professional business cards that make lasting impressions. What quantity do you need?",
+          true,
+          [
+            { text: "Get Business Card Quote", action: "quote-form" },
+            { text: "See Our Work", action: "portfolio" },
+          ],
+        );
         break;
       case "wedding":
-        addMessage("How romantic! 💌 We design beautiful wedding invitations and event materials. When is your special day?", true, [
-          { text: "Get Wedding Quote", action: "quote-form" },
-          { text: "See Wedding Samples", action: "portfolio" }
-        ]);
+        addMessage(
+          "How romantic! 💌 We design beautiful wedding invitations and event materials. When is your special day?",
+          true,
+          [
+            { text: "Get Wedding Quote", action: "quote-form" },
+            { text: "See Wedding Samples", action: "portfolio" },
+          ],
+        );
         break;
       case "branded":
-        addMessage("Excellent! 🎁 We create custom branded items like caps, wristbands, and promotional materials. What type of items do you need?", true, [
-          { text: "Get Branded Items Quote", action: "quote-form" },
-          { text: "View Our Products", action: "portfolio" }
-        ]);
+        addMessage(
+          "Excellent! 🎁 We create custom branded items like caps, wristbands, and promotional materials. What type of items do you need?",
+          true,
+          [
+            { text: "Get Branded Items Quote", action: "quote-form" },
+            { text: "View Our Products", action: "portfolio" },
+          ],
+        );
         break;
       case "portfolio":
         window.open("/portfolio", "_blank");
-        addMessage("Check out our portfolio in the new tab! You'll see work for government agencies, banks, and many satisfied clients. ✨", true);
+        addMessage(
+          "Check out our portfolio in the new tab! You'll see work for government agencies, banks, and many satisfied clients. ✨",
+          true,
+        );
         break;
       default:
         if (quickResponses[action as keyof typeof quickResponses]) {
-          const response = quickResponses[action as keyof typeof quickResponses];
+          const response =
+            quickResponses[action as keyof typeof quickResponses];
           addMessage(response.text, true, response.options);
         }
         break;
@@ -141,17 +182,21 @@ export default function Chatbot() {
 
   const handleSendMessage = () => {
     if (!currentMessage.trim()) return;
-    
+
     addMessage(currentMessage);
     setCurrentMessage("");
-    
+
     // Simple bot response
     setTimeout(() => {
-      addMessage("Thank you for your message! 😊 For the quickest response, please use the options above or contact us directly at +234.8029477796. Our team will get back to you soon!", true, [
-        { text: "Get a Quote", action: "quote" },
-        { text: "Call Us Now", action: "call" },
-        { text: "Our Services", action: "services" }
-      ]);
+      addMessage(
+        "Thank you for your message! 😊 For the quickest response, please use the options above or contact us directly at +234.8029477796. Our team will get back to you soon!",
+        true,
+        [
+          { text: "Get a Quote", action: "quote" },
+          { text: "Call Us Now", action: "call" },
+          { text: "Our Services", action: "services" },
+        ],
+      );
     }, 1000);
   };
 
@@ -193,12 +238,17 @@ export default function Chatbot() {
           {/* Messages */}
           <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-64">
             {messages.map((message) => (
-              <div key={message.id} className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}>
-                <div className={`max-w-xs p-3 rounded-lg ${
-                  message.isBot 
-                    ? 'bg-gray-100 text-gray-800' 
-                    : 'bg-gradient-to-r from-brand-cyan to-brand-magenta text-white'
-                }`}>
+              <div
+                key={message.id}
+                className={`flex ${message.isBot ? "justify-start" : "justify-end"}`}
+              >
+                <div
+                  className={`max-w-xs p-3 rounded-lg ${
+                    message.isBot
+                      ? "bg-gray-100 text-gray-800"
+                      : "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
+                  }`}
+                >
                   <p className="text-sm whitespace-pre-line">{message.text}</p>
                   {message.options && (
                     <div className="mt-2 space-y-1">
@@ -226,7 +276,7 @@ export default function Chatbot() {
                 placeholder="Type your message..."
                 value={currentMessage}
                 onChange={(e) => setCurrentMessage(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                 className="flex-1 text-sm"
               />
               <Button

@@ -1,11 +1,17 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { 
-  Building2, 
+import {
+  Building2,
   Landmark,
   Home,
   Hospital,
@@ -14,7 +20,7 @@ import {
   Users,
   Star,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -23,118 +29,166 @@ export default function Portfolio() {
       name: "Lagos State Government",
       category: "Government",
       icon: <Landmark className="w-8 h-8" />,
-      description: "Comprehensive printing solutions for government communications, campaigns, and official materials",
-      projects: ["Electoral Materials", "Public Awareness Campaigns", "Official Documents", "Signage & Banners"],
-      color: "from-blue-600 to-blue-700"
+      description:
+        "Comprehensive printing solutions for government communications, campaigns, and official materials",
+      projects: [
+        "Electoral Materials",
+        "Public Awareness Campaigns",
+        "Official Documents",
+        "Signage & Banners",
+      ],
+      color: "from-blue-600 to-blue-700",
     },
     {
       name: "Ekiti State Government",
       category: "Government",
       icon: <Building2 className="w-8 h-8" />,
-      description: "State-wide printing services for administrative and public communication needs",
-      projects: ["Government Publications", "Public Information Materials", "Event Materials", "Official Stationery"],
-      color: "from-green-600 to-green-700"
+      description:
+        "State-wide printing services for administrative and public communication needs",
+      projects: [
+        "Government Publications",
+        "Public Information Materials",
+        "Event Materials",
+        "Official Stationery",
+      ],
+      color: "from-green-600 to-green-700",
     },
     {
       name: "JAADOL Homes",
       category: "Real Estate",
       icon: <Home className="w-8 h-8" />,
-      description: "Premium real estate marketing materials and property branding solutions",
-      projects: ["Property Brochures", "Sales Materials", "Site Signage", "Marketing Collaterals"],
-      color: "from-purple-600 to-purple-700"
+      description:
+        "Premium real estate marketing materials and property branding solutions",
+      projects: [
+        "Property Brochures",
+        "Sales Materials",
+        "Site Signage",
+        "Marketing Collaterals",
+      ],
+      color: "from-purple-600 to-purple-700",
     },
     {
       name: "JAAD Hospital Needs",
       category: "Healthcare",
       icon: <Hospital className="w-8 h-8" />,
-      description: "Healthcare facility branding and patient communication materials",
-      projects: ["Medical Forms", "Patient Information", "Facility Signage", "Health Campaigns"],
-      color: "from-red-600 to-red-700"
+      description:
+        "Healthcare facility branding and patient communication materials",
+      projects: [
+        "Medical Forms",
+        "Patient Information",
+        "Facility Signage",
+        "Health Campaigns",
+      ],
+      color: "from-red-600 to-red-700",
     },
     {
       name: "Polaris Bank",
       category: "Banking",
       icon: <Building className="w-8 h-8" />,
-      description: "Corporate banking materials and customer communication solutions",
-      projects: ["Banking Forms", "Marketing Materials", "Branch Signage", "Customer Communications"],
-      color: "from-indigo-600 to-indigo-700"
+      description:
+        "Corporate banking materials and customer communication solutions",
+      projects: [
+        "Banking Forms",
+        "Marketing Materials",
+        "Branch Signage",
+        "Customer Communications",
+      ],
+      color: "from-indigo-600 to-indigo-700",
     },
     {
       name: "Stanbic Bank",
       category: "Banking",
       icon: <Building className="w-8 h-8" />,
       description: "Enterprise banking solutions and promotional materials",
-      projects: ["Corporate Materials", "Promotional Items", "ATM Signage", "Customer Guides"],
-      color: "from-orange-600 to-orange-700"
+      projects: [
+        "Corporate Materials",
+        "Promotional Items",
+        "ATM Signage",
+        "Customer Guides",
+      ],
+      color: "from-orange-600 to-orange-700",
     },
     {
       name: "Leading Nigerian Political Parties",
       category: "Political",
       icon: <Award className="w-8 h-8" />,
       description: "Campaign materials and political communication solutions",
-      projects: ["Campaign Banners", "Promotional Materials", "Event Signage", "Voter Information"],
-      color: "from-yellow-600 to-yellow-700"
-    }
+      projects: [
+        "Campaign Banners",
+        "Promotional Materials",
+        "Event Signage",
+        "Voter Information",
+      ],
+      color: "from-yellow-600 to-yellow-700",
+    },
   ];
 
   const portfolioCategories = [
     {
       id: "government",
       title: "Government Projects",
-      description: "Official materials for government agencies and public institutions",
-      count: "50+ Projects"
+      description:
+        "Official materials for government agencies and public institutions",
+      count: "50+ Projects",
     },
     {
       id: "corporate",
       title: "Corporate Solutions",
-      description: "Business materials for banks, corporations, and enterprises",
-      count: "200+ Projects"
+      description:
+        "Business materials for banks, corporations, and enterprises",
+      count: "200+ Projects",
     },
     {
       id: "healthcare",
       title: "Healthcare Materials",
-      description: "Medical forms, patient information, and healthcare communications",
-      count: "30+ Projects"
+      description:
+        "Medical forms, patient information, and healthcare communications",
+      count: "30+ Projects",
     },
     {
       id: "political",
       title: "Political Campaigns",
       description: "Campaign materials and political communication solutions",
-      count: "100+ Projects"
+      count: "100+ Projects",
     },
     {
       id: "events",
       title: "Events & Weddings",
-      description: "Invitations, event materials, and special occasion printing",
-      count: "500+ Projects"
+      description:
+        "Invitations, event materials, and special occasion printing",
+      count: "500+ Projects",
     },
     {
       id: "commercial",
       title: "Commercial Printing",
-      description: "Business cards, flyers, brochures, and promotional materials",
-      count: "1000+ Projects"
-    }
+      description:
+        "Business cards, flyers, brochures, and promotional materials",
+      count: "1000+ Projects",
+    },
   ];
 
   const testimonials = [
     {
       name: "Lagos State Ministry of Information",
       role: "Public Communications",
-      content: "AKTOMRADY has been instrumental in delivering high-quality printing solutions for our public awareness campaigns. Their attention to detail and timely delivery is exceptional.",
-      rating: 5
+      content:
+        "AKTOMRADY has been instrumental in delivering high-quality printing solutions for our public awareness campaigns. Their attention to detail and timely delivery is exceptional.",
+      rating: 5,
     },
     {
       name: "Polaris Bank",
       role: "Marketing Department",
-      content: "The quality of their work and professional service has made them our go-to printing partner. They understand our brand requirements perfectly.",
-      rating: 5
+      content:
+        "The quality of their work and professional service has made them our go-to printing partner. They understand our brand requirements perfectly.",
+      rating: 5,
     },
     {
       name: "JAADOL Homes",
       role: "Sales & Marketing",
-      content: "From property brochures to large format signage, AKTOMRADY delivers consistent quality that helps us present our properties professionally.",
-      rating: 5
-    }
+      content:
+        "From property brochures to large format signage, AKTOMRADY delivers consistent quality that helps us present our properties professionally.",
+      rating: 5,
+    },
   ];
 
   return (
@@ -147,8 +201,8 @@ export default function Portfolio() {
               Our Portfolio
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Trusted by government agencies, major banks, healthcare institutions, 
-              and leading corporations across Nigeria.
+              Trusted by government agencies, major banks, healthcare
+              institutions, and leading corporations across Nigeria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-lg">
               <div className="flex items-center">
@@ -172,20 +226,28 @@ export default function Portfolio() {
               Trusted by Major Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're proud to serve some of Nigeria's most prestigious organizations, 
-              delivering exceptional printing solutions that meet the highest standards.
+              We're proud to serve some of Nigeria's most prestigious
+              organizations, delivering exceptional printing solutions that meet
+              the highest standards.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {majorClients.map((client, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+              >
                 <CardHeader>
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${client.color} flex items-center justify-center text-white mb-4`}>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${client.color} flex items-center justify-center text-white mb-4`}
+                  >
                     {client.icon}
                   </div>
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl font-bold">{client.name}</CardTitle>
+                    <CardTitle className="text-xl font-bold">
+                      {client.name}
+                    </CardTitle>
                     <Badge variant="secondary">{client.category}</Badge>
                   </div>
                   <CardDescription className="text-gray-600">
@@ -194,9 +256,14 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Projects:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Key Projects:
+                    </h4>
                     {client.projects.map((project, projectIndex) => (
-                      <div key={projectIndex} className="flex items-center text-sm text-gray-600">
+                      <div
+                        key={projectIndex}
+                        className="flex items-center text-sm text-gray-600"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {project}
                       </div>
@@ -217,7 +284,8 @@ export default function Portfolio() {
               Project Categories
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our diverse portfolio across various industries and project types
+              Explore our diverse portfolio across various industries and
+              project types
             </p>
           </div>
 
@@ -228,17 +296,18 @@ export default function Portfolio() {
               <TabsTrigger value="corporate">Corporate</TabsTrigger>
               <TabsTrigger value="commercial">Commercial</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="all" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {portfolioCategories.map((category, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                  <div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow"
+                  >
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {category.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {category.description}
-                    </p>
+                    <p className="text-gray-600 mb-4">{category.description}</p>
                     <div className="flex items-center justify-between">
                       <Badge className="bg-brand-blue text-white">
                         {category.count}
@@ -249,64 +318,85 @@ export default function Portfolio() {
                 ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="government">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {majorClients.filter(client => client.category === "Government").map((client, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <CardTitle>{client.name}</CardTitle>
-                      <CardDescription>{client.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-2">
-                        {client.projects.map((project, projectIndex) => (
-                          <div key={projectIndex} className="flex items-center text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            {project}
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                {majorClients
+                  .filter((client) => client.category === "Government")
+                  .map((client, index) => (
+                    <Card
+                      key={index}
+                      className="hover:shadow-lg transition-shadow"
+                    >
+                      <CardHeader>
+                        <CardTitle>{client.name}</CardTitle>
+                        <CardDescription>{client.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-2">
+                          {client.projects.map((project, projectIndex) => (
+                            <div
+                              key={projectIndex}
+                              className="flex items-center text-sm"
+                            >
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              {project}
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="corporate">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {majorClients.filter(client => ["Banking", "Real Estate", "Healthcare"].includes(client.category)).map((client, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <CardTitle>{client.name}</CardTitle>
-                      <CardDescription>{client.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-2">
-                        {client.projects.map((project, projectIndex) => (
-                          <div key={projectIndex} className="flex items-center text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            {project}
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                {majorClients
+                  .filter((client) =>
+                    ["Banking", "Real Estate", "Healthcare"].includes(
+                      client.category,
+                    ),
+                  )
+                  .map((client, index) => (
+                    <Card
+                      key={index}
+                      className="hover:shadow-lg transition-shadow"
+                    >
+                      <CardHeader>
+                        <CardTitle>{client.name}</CardTitle>
+                        <CardDescription>{client.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-2">
+                          {client.projects.map((project, projectIndex) => (
+                            <div
+                              key={projectIndex}
+                              className="flex items-center text-sm"
+                            >
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              {project}
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="commercial">
               <div className="text-center py-16">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Commercial Projects
                 </h3>
                 <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                  We've completed over 1000 commercial printing projects including business cards, 
-                  flyers, brochures, promotional materials, and custom branded items for businesses 
-                  across Nigeria.
+                  We've completed over 1000 commercial printing projects
+                  including business cards, flyers, brochures, promotional
+                  materials, and custom branded items for businesses across
+                  Nigeria.
                 </p>
-                <Button 
+                <Button
                   className="bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90"
                   asChild
                 >
@@ -336,14 +426,19 @@ export default function Portfolio() {
                 <CardContent className="pt-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
                   <p className="text-gray-600 mb-4 italic">
                     "{testimonial.content}"
                   </p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </p>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
                   </div>
                 </CardContent>
@@ -360,17 +455,18 @@ export default function Portfolio() {
             Ready to Join Our Success Stories?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let us help you create professional printing solutions that make an impact.
+            Let us help you create professional printing solutions that make an
+            impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               size="lg"
               className="bg-white text-brand-blue hover:bg-white/90 font-semibold px-8 py-3"
               asChild
             >
               <Link to="/contact">Start Your Project</Link>
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-brand-blue font-semibold px-8 py-3"

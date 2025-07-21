@@ -6,7 +6,9 @@ export default function CookieNotification() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const hasAcceptedCookies = localStorage.getItem("aktomrady-cookies-accepted");
+    const hasAcceptedCookies = localStorage.getItem(
+      "aktomrady-cookies-accepted",
+    );
     if (!hasAcceptedCookies) {
       // Show notification after 2 seconds
       const timer = setTimeout(() => {
@@ -37,14 +39,17 @@ export default function CookieNotification() {
           <div className="flex items-start gap-3 flex-1">
             <Cookie className="w-6 h-6 text-brand-cyan mt-1 flex-shrink-0" />
             <div>
-              <h3 className="font-semibold text-gray-900 mb-1">We use cookies</h3>
+              <h3 className="font-semibold text-gray-900 mb-1">
+                We use cookies
+              </h3>
               <p className="text-sm text-gray-600">
-                We use cookies to enhance your browsing experience, serve personalized ads or content, 
-                and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+                We use cookies to enhance your browsing experience, serve
+                personalized ads or content, and analyze our traffic. By
+                clicking "Accept All", you consent to our use of cookies.
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 flex-shrink-0">
             <Button
               variant="outline"

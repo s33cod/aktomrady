@@ -93,21 +93,26 @@ class ContentfulClient {
   private baseUrl: string;
 
   constructor() {
-    this.spaceId = process.env.CONTENTFUL_SPACE_ID || '';
-    this.accessToken = process.env.CONTENTFUL_ACCESS_TOKEN || '';
+    this.spaceId = process.env.CONTENTFUL_SPACE_ID || "";
+    this.accessToken = process.env.CONTENTFUL_ACCESS_TOKEN || "";
     this.baseUrl = `https://cdn.contentful.com/spaces/${this.spaceId}`;
   }
 
-  private async fetchEntries(contentType: string, query: Record<string, any> = {}) {
+  private async fetchEntries(
+    contentType: string,
+    query: Record<string, any> = {},
+  ) {
     if (!this.spaceId || !this.accessToken) {
-      console.warn('Contentful credentials not configured. Using fallback data.');
+      console.warn(
+        "Contentful credentials not configured. Using fallback data.",
+      );
       return this.getFallbackData(contentType);
     }
 
     const params = new URLSearchParams({
       access_token: this.accessToken,
       content_type: contentType,
-      ...query
+      ...query,
     });
 
     try {
@@ -118,7 +123,7 @@ class ContentfulClient {
       const data = await response.json();
       return data.items;
     } catch (error) {
-      console.error('Error fetching from Contentful:', error);
+      console.error("Error fetching from Contentful:", error);
       return this.getFallbackData(contentType);
     }
   }
@@ -128,89 +133,91 @@ class ContentfulClient {
     const fallbackData: Record<string, any[]> = {
       project: [
         {
-          sys: { id: '1', createdAt: '2024-01-01', updatedAt: '2024-01-01' },
+          sys: { id: "1", createdAt: "2024-01-01", updatedAt: "2024-01-01" },
           fields: {
-            title: 'Lagos State Government Campaign',
-            description: 'Large format prints for state-wide awareness campaign',
-            client: 'Lagos State Government',
-            category: 'Government',
+            title: "Lagos State Government Campaign",
+            description:
+              "Large format prints for state-wide awareness campaign",
+            client: "Lagos State Government",
+            category: "Government",
             images: [],
             featured: true,
-            completedDate: '2024-01-15',
-            services: ['Large Format Prints', 'Banners', 'Signage']
-          }
-        }
+            completedDate: "2024-01-15",
+            services: ["Large Format Prints", "Banners", "Signage"],
+          },
+        },
       ],
       service: [
         {
-          sys: { id: '1' },
+          sys: { id: "1" },
           fields: {
-            title: 'Large Format Prints',
-            description: 'Professional banners, billboards, and high-quality product stickers',
-            icon: '📢',
-            features: ['Banners & Billboards', 'Product Stickers', 'Posters'],
-            priceRange: '₦10,000 - ₦500,000',
-            popular: true
-          }
-        }
+            title: "Large Format Prints",
+            description:
+              "Professional banners, billboards, and high-quality product stickers",
+            icon: "📢",
+            features: ["Banners & Billboards", "Product Stickers", "Posters"],
+            priceRange: "₦10,000 - ₦500,000",
+            popular: true,
+          },
+        },
       ],
       teamMember: [
         {
-          sys: { id: '1' },
+          sys: { id: "1" },
           fields: {
-            name: 'Adebayo Ogundimu',
-            role: 'Founder & CEO',
-            bio: 'Visionary leader with 15+ years in printing industry',
-            expertise: ['Strategic Leadership', 'Business Development'],
-            photo: { fields: { file: { url: '' } } }
-          }
-        }
+            name: "Adebayo Ogundimu",
+            role: "Founder & CEO",
+            bio: "Visionary leader with 15+ years in printing industry",
+            expertise: ["Strategic Leadership", "Business Development"],
+            photo: { fields: { file: { url: "" } } },
+          },
+        },
       ],
       testimonial: [
         {
-          sys: { id: '1' },
+          sys: { id: "1" },
           fields: {
-            clientName: 'Lagos State Ministry',
-            clientRole: 'Public Communications',
-            company: 'Lagos State Government',
-            content: 'AKTOMRADY delivers exceptional quality and service.',
+            clientName: "Lagos State Ministry",
+            clientRole: "Public Communications",
+            company: "Lagos State Government",
+            content: "AKTOMRADY delivers exceptional quality and service.",
             rating: 5,
-            featured: true
-          }
-        }
-      ]
+            featured: true,
+          },
+        },
+      ],
     };
 
     return fallbackData[contentType] || [];
   }
 
   async getProjects(featured?: boolean): Promise<ProjectEntry[]> {
-    const query = featured ? { 'fields.featured': true } : {};
-    return this.fetchEntries('project', query);
+    const query = featured ? { "fields.featured": true } : {};
+    return this.fetchEntries("project", query);
   }
 
   async getServices(): Promise<ServiceEntry[]> {
-    return this.fetchEntries('service');
+    return this.fetchEntries("service");
   }
 
   async getTeamMembers(): Promise<TeamMemberEntry[]> {
-    return this.fetchEntries('teamMember');
+    return this.fetchEntries("teamMember");
   }
 
   async getTestimonials(featured?: boolean): Promise<TestimonialEntry[]> {
-    const query = featured ? { 'fields.featured': true } : {};
-    return this.fetchEntries('testimonial', query);
+    const query = featured ? { "fields.featured": true } : {};
+    return this.fetchEntries("testimonial", query);
   }
 
   async getFeaturedContent() {
     const [projects, testimonials] = await Promise.all([
       this.getProjects(true),
-      this.getTestimonials(true)
+      this.getTestimonials(true),
     ]);
 
     return {
       projects,
-      testimonials
+      testimonials,
     };
   }
 }

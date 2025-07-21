@@ -3,20 +3,32 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Phone,
+  Mail,
+  MapPin,
   Clock,
   MessageCircle,
   Send,
   CheckCircle,
   Calculator,
   FileText,
-  Users
+  Users,
 } from "lucide-react";
 
 export default function Contact() {
@@ -25,7 +37,7 @@ export default function Contact() {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   const [quoteForm, setQuoteForm] = useState({
@@ -37,7 +49,7 @@ export default function Contact() {
     quantity: "",
     timeline: "",
     description: "",
-    budget: ""
+    budget: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,33 +58,46 @@ export default function Contact() {
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     console.log("Contact form submitted:", contactForm);
     setSubmitSuccess(true);
-    setContactForm({ name: "", email: "", phone: "", subject: "", message: "" });
+    setContactForm({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
     setIsSubmitting(false);
-    
+
     setTimeout(() => setSubmitSuccess(false), 3000);
   };
 
   const handleQuoteSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     console.log("Quote form submitted:", quoteForm);
     setSubmitSuccess(true);
-    setQuoteForm({ 
-      name: "", email: "", phone: "", company: "", service: "", 
-      quantity: "", timeline: "", description: "", budget: "" 
+    setQuoteForm({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      quantity: "",
+      timeline: "",
+      description: "",
+      budget: "",
     });
     setIsSubmitting(false);
-    
+
     setTimeout(() => setSubmitSuccess(false), 3000);
   };
 
@@ -81,26 +106,34 @@ export default function Contact() {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone Number",
       details: ["+234.8029477796"],
-      color: "from-brand-cyan to-brand-magenta"
+      color: "from-brand-cyan to-brand-magenta",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Addresses",
       details: ["info@aktomrady.com", "aktomradyagencies@yahoo.com"],
-      color: "from-brand-magenta to-brand-yellow"
+      color: "from-brand-magenta to-brand-yellow",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Office Location",
-      details: ["5, Kayode Street, Ogba", "Lagos Mainland, OGBA LAGOS", "Nigeria"],
-      color: "from-brand-yellow to-brand-cyan"
+      details: [
+        "5, Kayode Street, Ogba",
+        "Lagos Mainland, OGBA LAGOS",
+        "Nigeria",
+      ],
+      color: "from-brand-yellow to-brand-cyan",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-      details: ["Monday - Friday: 8:00 AM - 6:00 PM", "Saturday: 9:00 AM - 4:00 PM", "Sunday: Emergency Services Only"],
-      color: "from-brand-cyan to-brand-blue"
-    }
+      details: [
+        "Monday - Friday: 8:00 AM - 6:00 PM",
+        "Saturday: 9:00 AM - 4:00 PM",
+        "Sunday: Emergency Services Only",
+      ],
+      color: "from-brand-cyan to-brand-blue",
+    },
   ];
 
   const services = [
@@ -113,7 +146,7 @@ export default function Contact() {
     "Corporate Materials",
     "Event Materials",
     "Packaging Materials",
-    "Other (Please Specify)"
+    "Other (Please Specify)",
   ];
 
   return (
@@ -126,8 +159,9 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to bring your printing project to life? Get in touch with our expert team today. 
-              We're here to help with quotes, consultations, and all your printing needs.
+              Ready to bring your printing project to life? Get in touch with
+              our expert team today. We're here to help with quotes,
+              consultations, and all your printing needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -146,7 +180,11 @@ export default function Contact() {
                 className="border-white text-white hover:bg-white hover:text-brand-magenta font-semibold px-8 py-3"
                 asChild
               >
-                <a href="https://wa.me/2348029477796" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/2348029477796"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Us
                 </a>
@@ -170,12 +208,19 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow text-center">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow text-center"
+              >
                 <CardHeader>
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center text-white mx-auto mb-4`}>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center text-white mx-auto mb-4`}
+                  >
                     {info.icon}
                   </div>
-                  <CardTitle className="text-lg font-bold">{info.title}</CardTitle>
+                  <CardTitle className="text-lg font-bold">
+                    {info.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
@@ -202,7 +247,9 @@ export default function Contact() {
                 <div className="flex items-center mb-4">
                   <MessageCircle className="w-8 h-8 text-brand-blue mr-3" />
                   <div>
-                    <CardTitle className="text-2xl font-bold">Send Us a Message</CardTitle>
+                    <CardTitle className="text-2xl font-bold">
+                      Send Us a Message
+                    </CardTitle>
                     <CardDescription>
                       Have questions? We'd love to hear from you.
                     </CardDescription>
@@ -213,10 +260,12 @@ export default function Contact() {
                 {submitSuccess && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-green-700">Message sent successfully! We'll get back to you soon.</span>
+                    <span className="text-green-700">
+                      Message sent successfully! We'll get back to you soon.
+                    </span>
                   </div>
                 )}
-                
+
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -226,7 +275,12 @@ export default function Contact() {
                         type="text"
                         placeholder="Your full name"
                         value={contactForm.name}
-                        onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            name: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
@@ -237,12 +291,17 @@ export default function Contact() {
                         type="email"
                         placeholder="your@email.com"
                         value={contactForm.email}
-                        onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            email: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="contact-phone">Phone Number</Label>
@@ -251,7 +310,12 @@ export default function Contact() {
                         type="tel"
                         placeholder="+234 xxx xxx xxxx"
                         value={contactForm.phone}
-                        onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            phone: e.target.value,
+                          })
+                        }
                       />
                     </div>
                     <div>
@@ -261,26 +325,36 @@ export default function Contact() {
                         type="text"
                         placeholder="What is this regarding?"
                         value={contactForm.subject}
-                        onChange={(e) => setContactForm({...contactForm, subject: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            subject: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="contact-message">Message *</Label>
                     <Textarea
                       id="contact-message"
                       placeholder="Tell us more about your inquiry..."
                       value={contactForm.message}
-                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                      onChange={(e) =>
+                        setContactForm({
+                          ...contactForm,
+                          message: e.target.value,
+                        })
+                      }
                       rows={6}
                       required
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90"
                   >
@@ -297,7 +371,9 @@ export default function Contact() {
                 <div className="flex items-center mb-4">
                   <Calculator className="w-8 h-8 text-brand-blue mr-3" />
                   <div>
-                    <CardTitle className="text-2xl font-bold">Request a Quote</CardTitle>
+                    <CardTitle className="text-2xl font-bold">
+                      Request a Quote
+                    </CardTitle>
                     <CardDescription>
                       Get a detailed quote for your printing project.
                     </CardDescription>
@@ -314,7 +390,9 @@ export default function Contact() {
                         type="text"
                         placeholder="Your full name"
                         value={quoteForm.name}
-                        onChange={(e) => setQuoteForm({...quoteForm, name: e.target.value})}
+                        onChange={(e) =>
+                          setQuoteForm({ ...quoteForm, name: e.target.value })
+                        }
                         required
                       />
                     </div>
@@ -325,12 +403,14 @@ export default function Contact() {
                         type="email"
                         placeholder="your@email.com"
                         value={quoteForm.email}
-                        onChange={(e) => setQuoteForm({...quoteForm, email: e.target.value})}
+                        onChange={(e) =>
+                          setQuoteForm({ ...quoteForm, email: e.target.value })
+                        }
                         required
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="quote-phone">Phone Number *</Label>
@@ -339,26 +419,40 @@ export default function Contact() {
                         type="tel"
                         placeholder="+234 xxx xxx xxxx"
                         value={quoteForm.phone}
-                        onChange={(e) => setQuoteForm({...quoteForm, phone: e.target.value})}
+                        onChange={(e) =>
+                          setQuoteForm({ ...quoteForm, phone: e.target.value })
+                        }
                         required
                       />
                     </div>
                     <div>
-                      <Label htmlFor="quote-company">Company/Organization</Label>
+                      <Label htmlFor="quote-company">
+                        Company/Organization
+                      </Label>
                       <Input
                         id="quote-company"
                         type="text"
                         placeholder="Your company name"
                         value={quoteForm.company}
-                        onChange={(e) => setQuoteForm({...quoteForm, company: e.target.value})}
+                        onChange={(e) =>
+                          setQuoteForm({
+                            ...quoteForm,
+                            company: e.target.value,
+                          })
+                        }
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="quote-service">Service Required *</Label>
-                      <Select value={quoteForm.service} onValueChange={(value) => setQuoteForm({...quoteForm, service: value})}>
+                      <Select
+                        value={quoteForm.service}
+                        onValueChange={(value) =>
+                          setQuoteForm({ ...quoteForm, service: value })
+                        }
+                      >
                         <SelectTrigger>
                           <SelectValue placeholder="Select service" />
                         </SelectTrigger>
@@ -378,56 +472,94 @@ export default function Contact() {
                         type="text"
                         placeholder="e.g., 1000 pieces"
                         value={quoteForm.quantity}
-                        onChange={(e) => setQuoteForm({...quoteForm, quantity: e.target.value})}
+                        onChange={(e) =>
+                          setQuoteForm({
+                            ...quoteForm,
+                            quantity: e.target.value,
+                          })
+                        }
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="quote-timeline">Timeline</Label>
-                      <Select value={quoteForm.timeline} onValueChange={(value) => setQuoteForm({...quoteForm, timeline: value})}>
+                      <Select
+                        value={quoteForm.timeline}
+                        onValueChange={(value) =>
+                          setQuoteForm({ ...quoteForm, timeline: value })
+                        }
+                      >
                         <SelectTrigger>
                           <SelectValue placeholder="When do you need this?" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="urgent">Urgent (1-2 days)</SelectItem>
-                          <SelectItem value="standard">Standard (3-5 days)</SelectItem>
-                          <SelectItem value="flexible">Flexible (1-2 weeks)</SelectItem>
-                          <SelectItem value="planning">Just planning ahead</SelectItem>
+                          <SelectItem value="urgent">
+                            Urgent (1-2 days)
+                          </SelectItem>
+                          <SelectItem value="standard">
+                            Standard (3-5 days)
+                          </SelectItem>
+                          <SelectItem value="flexible">
+                            Flexible (1-2 weeks)
+                          </SelectItem>
+                          <SelectItem value="planning">
+                            Just planning ahead
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
                       <Label htmlFor="quote-budget">Budget Range</Label>
-                      <Select value={quoteForm.budget} onValueChange={(value) => setQuoteForm({...quoteForm, budget: value})}>
+                      <Select
+                        value={quoteForm.budget}
+                        onValueChange={(value) =>
+                          setQuoteForm({ ...quoteForm, budget: value })
+                        }
+                      >
                         <SelectTrigger>
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="under-50k">Under ₦50,000</SelectItem>
-                          <SelectItem value="50k-100k">₦50,000 - ₦100,000</SelectItem>
-                          <SelectItem value="100k-500k">₦100,000 - ₦500,000</SelectItem>
-                          <SelectItem value="over-500k">Over ₦500,000</SelectItem>
+                          <SelectItem value="under-50k">
+                            Under ₦50,000
+                          </SelectItem>
+                          <SelectItem value="50k-100k">
+                            ₦50,000 - ₦100,000
+                          </SelectItem>
+                          <SelectItem value="100k-500k">
+                            ₦100,000 - ₦500,000
+                          </SelectItem>
+                          <SelectItem value="over-500k">
+                            Over ₦500,000
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
-                  
+
                   <div>
-                    <Label htmlFor="quote-description">Project Description *</Label>
+                    <Label htmlFor="quote-description">
+                      Project Description *
+                    </Label>
                     <Textarea
                       id="quote-description"
                       placeholder="Please describe your project in detail including specifications, materials, colors, etc."
                       value={quoteForm.description}
-                      onChange={(e) => setQuoteForm({...quoteForm, description: e.target.value})}
+                      onChange={(e) =>
+                        setQuoteForm({
+                          ...quoteForm,
+                          description: e.target.value,
+                        })
+                      }
                       rows={6}
                       required
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90"
                   >
@@ -459,20 +591,22 @@ export default function Contact() {
                 city: "Lagos Office",
                 address: "Plot 123, Victoria Island, Lagos State, Nigeria",
                 phone: "+234 813 4466 334",
-                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM"
+                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
               },
               {
                 city: "Abuja Office",
-                address: "Suite 45, Central Business District, Abuja, FCT, Nigeria",
+                address:
+                  "Suite 45, Central Business District, Abuja, FCT, Nigeria",
                 phone: "+234 902 345 6789",
-                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM"
+                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
               },
               {
                 city: "Port Harcourt Office",
-                address: "67 Trans Amadi Road, Port Harcourt, Rivers State, Nigeria",
+                address:
+                  "67 Trans Amadi Road, Port Harcourt, Rivers State, Nigeria",
                 phone: "+234 708 123 4567",
-                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM"
-              }
+                hours: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
+              },
             ].map((office, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>

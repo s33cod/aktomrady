@@ -1,5 +1,17 @@
 import { Link } from "react-router-dom";
-import { Menu, X, Facebook, Instagram, MessageCircle, Home, Briefcase, Award, Users, Phone, Calculator } from "lucide-react";
+import {
+  Menu,
+  X,
+  Facebook,
+  Instagram,
+  MessageCircle,
+  Home,
+  Briefcase,
+  Award,
+  Users,
+  Phone,
+  Calculator,
+} from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import BackToTop from "@/components/BackToTop";
@@ -27,8 +39,12 @@ export default function Layout({ children }: LayoutProps) {
                 className="w-10 h-10 object-contain"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900 leading-tight">AKTOMRADY</span>
-                <span className="text-xs text-gray-500 hidden sm:inline leading-tight">AGENCIES (W.I.G)</span>
+                <span className="text-xl font-bold text-gray-900 leading-tight">
+                  AKTOMRADY
+                </span>
+                <span className="text-xs text-gray-500 hidden sm:inline leading-tight">
+                  AGENCIES (W.I.G)
+                </span>
               </div>
             </Link>
 
@@ -38,35 +54,50 @@ export default function Layout({ children }: LayoutProps) {
                 to="/"
                 className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                <Home size={18} className="group-hover:text-white transition-colors" />
+                <Home
+                  size={18}
+                  className="group-hover:text-white transition-colors"
+                />
                 <span>Home</span>
               </Link>
               <Link
                 to="/services"
                 className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                <Briefcase size={18} className="group-hover:text-white transition-colors" />
+                <Briefcase
+                  size={18}
+                  className="group-hover:text-white transition-colors"
+                />
                 <span>Services</span>
               </Link>
               <Link
                 to="/portfolio"
                 className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                <Award size={18} className="group-hover:text-white transition-colors" />
+                <Award
+                  size={18}
+                  className="group-hover:text-white transition-colors"
+                />
                 <span>Portfolio</span>
               </Link>
               <Link
                 to="/about"
                 className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                <Users size={18} className="group-hover:text-white transition-colors" />
+                <Users
+                  size={18}
+                  className="group-hover:text-white transition-colors"
+                />
                 <span>About</span>
               </Link>
               <Link
                 to="/contact"
                 className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                <Phone size={18} className="group-hover:text-white transition-colors" />
+                <Phone
+                  size={18}
+                  className="group-hover:text-white transition-colors"
+                />
                 <span>Contact</span>
               </Link>
               <Button
@@ -150,9 +181,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow">
-        {children}
-      </main>
+      <main className="flex-grow">{children}</main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -168,14 +197,19 @@ export default function Layout({ children }: LayoutProps) {
                   className="w-10 h-10 object-contain"
                 />
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold leading-tight">AKTOMRADY</span>
-                  <span className="text-sm text-gray-400 leading-tight">AGENCIES (W.I.G)</span>
+                  <span className="text-xl font-bold leading-tight">
+                    AKTOMRADY
+                  </span>
+                  <span className="text-sm text-gray-400 leading-tight">
+                    AGENCIES (W.I.G)
+                  </span>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Nigeria's trusted printing partner offering premium quality large format prints,
-                custom branded items, business materials, and comprehensive printing solutions
-                for government agencies, corporations, and individuals.
+                Nigeria's trusted printing partner offering premium quality
+                large format prints, custom branded items, business materials,
+                and comprehensive printing solutions for government agencies,
+                corporations, and individuals.
               </p>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center text-gray-300">
@@ -200,7 +234,10 @@ export default function Layout({ children }: LayoutProps) {
                 <div>
                   <p className="text-gray-400 mb-1">Phone Numbers:</p>
                   <p className="text-white">
-                    <a href="tel:+2348029477796" className="hover:text-brand-cyan transition-colors">
+                    <a
+                      href="tel:+2348029477796"
+                      className="hover:text-brand-cyan transition-colors"
+                    >
                       +234.8029477796
                     </a>
                   </p>
@@ -208,12 +245,18 @@ export default function Layout({ children }: LayoutProps) {
                 <div>
                   <p className="text-gray-400 mb-1">Email:</p>
                   <p className="text-white">
-                    <a href="mailto:info@aktomrady.com" className="hover:text-brand-cyan transition-colors">
+                    <a
+                      href="mailto:info@aktomrady.com"
+                      className="hover:text-brand-cyan transition-colors"
+                    >
                       info@aktomrady.com
                     </a>
                   </p>
                   <p className="text-white">
-                    <a href="mailto:aktomradyagencies@yahoo.com" className="hover:text-brand-cyan transition-colors">
+                    <a
+                      href="mailto:aktomradyagencies@yahoo.com"
+                      className="hover:text-brand-cyan transition-colors"
+                    >
                       aktomradyagencies@yahoo.com
                     </a>
                   </p>
@@ -252,32 +295,110 @@ export default function Layout({ children }: LayoutProps) {
           <div className="py-6 border-t border-gray-800">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">Services</h4>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+                  Services
+                </h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Large Format Prints</Link></li>
-                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Business Cards</Link></li>
-                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Wedding Invitations</Link></li>
-                  <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Custom Branded Items</Link></li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Large Format Prints
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Business Cards
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Wedding Invitations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Custom Branded Items
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">Company</h4>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+                  Company
+                </h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link to="/portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</Link></li>
-                  <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/portfolio"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Portfolio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/contact"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Contact
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">Support</h4>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+                  Support
+                </h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="tel:+2348134466334" className="text-gray-400 hover:text-white transition-colors">Call Support</a></li>
-                  <li><a href="mailto:support@aktomrady.com" className="text-gray-400 hover:text-white transition-colors">Email Support</a></li>
-                  <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Get Quote</Link></li>
+                  <li>
+                    <a
+                      href="tel:+2348134466334"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Call Support
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:support@aktomrady.com"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Email Support
+                    </a>
+                  </li>
+                  <li>
+                    <Link
+                      to="/contact"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      Get Quote
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">Follow Us</h4>
+                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+                  Follow Us
+                </h4>
                 <div className="flex space-x-3">
                   <a
                     href="https://www.facebook.com/p/Aktomrady-100070072301601/"
@@ -320,9 +441,24 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
               </div>
               <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Sitemap</a>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </a>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Sitemap
+                </a>
               </div>
             </div>
           </div>
