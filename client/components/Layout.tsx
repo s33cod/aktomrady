@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Menu, X, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Menu, X, Facebook, Instagram, MessageCircle, Home, Briefcase, Award, Users, Phone, Calculator } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
