@@ -210,6 +210,7 @@ export default function HeroShowreel() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 text-lg backdrop-blur-sm"
+              style={{ textShadow: "1px 1px 3px rgba(3, 25, 57, 1)" }}
               asChild
             >
               <Link to="/portfolio">View Our Work</Link>
