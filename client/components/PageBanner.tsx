@@ -21,7 +21,7 @@ export default function PageBanner({
     <section
       className={`relative ${heightClasses[height]} bg-cover bg-center bg-no-repeat`}
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${backgroundImage}')`,
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
