@@ -120,8 +120,8 @@ export default function About() {
 
   const team = [
     {
-      name: "Adebayo Ogundimu",
-      role: "Founder & CEO",
+      name: "Akindele",
+      role: "Founder & Owner",
       description:
         "Visionary leader with 15+ years in printing industry, committed to delivering excellence across Nigeria.",
       expertise: [
@@ -131,7 +131,7 @@ export default function About() {
       ],
     },
     {
-      name: "Sarah Adekunle",
+      name: "Abiala",
       role: "Head of Operations",
       description:
         "Operations expert ensuring smooth workflow and quality control across all our facilities.",
@@ -142,14 +142,14 @@ export default function About() {
       ],
     },
     {
-      name: "Michael Emeka",
+      name: "James",
       role: "Creative Director",
       description:
         "Creative genius behind our design solutions, helping clients bring their vision to life.",
       expertise: ["Graphic Design", "Brand Identity", "Creative Strategy"],
     },
     {
-      name: "Fatima Ibrahim",
+      name: "Niyi",
       role: "Customer Success Manager",
       description:
         "Dedicated to ensuring every client receives exceptional service and support throughout their journey.",
