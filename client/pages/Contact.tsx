@@ -79,27 +79,27 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Phone Numbers",
-      details: ["+234 813 4466 334", "+234 902 345 6789", "+234 708 123 4567"],
-      color: "from-blue-500 to-blue-600"
+      title: "Phone Number",
+      details: ["+234.8029477796"],
+      color: "from-brand-cyan to-brand-magenta"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Addresses",
-      details: ["info@aktomrady.com", "orders@aktomrady.com", "support@aktomrady.com"],
-      color: "from-green-500 to-green-600"
+      details: ["info@aktomrady.com", "aktomradyagencies@yahoo.com"],
+      color: "from-brand-magenta to-brand-yellow"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Office Locations",
-      details: ["Lagos: Plot 123, Victoria Island, Lagos State", "Abuja: Suite 45, Central Business District", "Port Harcourt: 67 Trans Amadi Road"],
-      color: "from-purple-500 to-purple-600"
+      title: "Office Location",
+      details: ["5, Kayode Street, Ogba", "Lagos Mainland, OGBA LAGOS", "Nigeria"],
+      color: "from-brand-yellow to-brand-cyan"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
       details: ["Monday - Friday: 8:00 AM - 6:00 PM", "Saturday: 9:00 AM - 4:00 PM", "Sunday: Emergency Services Only"],
-      color: "from-orange-500 to-orange-600"
+      color: "from-brand-cyan to-brand-blue"
     }
   ];
 
