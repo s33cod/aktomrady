@@ -155,28 +155,12 @@ export default function Services() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Our Printing Services
-            </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Comprehensive printing solutions for businesses, events, and
-              personal needs. Trusted by government agencies, banks, and leading
-              corporations across Nigeria.
-            </p>
-            <Button
-              size="lg"
-              className="bg-white text-brand-blue hover:bg-white/90 font-semibold px-8 py-3"
-              asChild
-            >
-              <Link to="/contact">Get Free Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        title="Our Printing Services"
+        subtitle="Comprehensive printing solutions for businesses, events, and personal needs. Trusted by government agencies, banks, and leading corporations across Nigeria."
+        backgroundImage="https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        height="large"
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
