@@ -206,18 +206,17 @@ export default function Layout({ children }: LayoutProps) {
               <div className="space-y-4 text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Lagos Office:</p>
-                  <p className="text-white">Plot 123, Victoria Island</p>
-                  <p className="text-white">Lagos State, Nigeria</p>
+                  <p className="text-white">5, Kayode Street, Ogba</p>
+                  <p className="text-white">Lagos Mainland, OGBA LAGOS</p>
+                  <p className="text-white">Nigeria</p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Abuja Office:</p>
-                  <p className="text-white">Suite 45, Central Business District</p>
-                  <p className="text-white">Abuja, FCT, Nigeria</p>
+                  <p className="text-white text-sm italic">Coming Soon</p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Port Harcourt Office:</p>
-                  <p className="text-white">67 Trans Amadi Road</p>
-                  <p className="text-white">Rivers State, Nigeria</p>
+                  <p className="text-white text-sm italic">Coming Soon</p>
                 </div>
               </div>
             </div>
