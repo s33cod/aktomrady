@@ -119,4 +119,23 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Consistent styling for contact links */
+  a[href^="tel:"] {
+    @apply inline-flex items-center gap-2 text-brand-cyan hover:text-brand-magenta transition-colors duration-300 font-medium;
+  }
+
+  a[href^="mailto:"] {
+    @apply inline-flex items-center gap-2 text-brand-magenta hover:text-brand-cyan transition-colors duration-300 font-medium;
+  }
+
+  a[href^="tel:"]:before {
+    content: "📞";
+    font-size: 0.875rem;
+  }
+
+  a[href^="mailto:"]:before {
+    content: "📧";
+    font-size: 0.875rem;
+  }
 }
