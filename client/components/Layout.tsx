@@ -24,6 +24,11 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActiveLink = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
