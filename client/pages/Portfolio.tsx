@@ -197,7 +197,7 @@ export default function Portfolio() {
       <section
         className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F294ded20d7fb404cac9417c410910559)`,
+          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2Fda0c3c8154524b46b006c50257e6e2aa)`,
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
