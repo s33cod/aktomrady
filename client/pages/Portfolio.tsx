@@ -194,7 +194,12 @@ export default function Portfolio() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white">
+      <section
+        className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F294ded20d7fb404cac9417c410910559)`
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
