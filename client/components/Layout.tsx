@@ -234,7 +234,7 @@ export default function Layout({ children }: LayoutProps) {
                     AKTOMRADY
                   </span>
                   <span className="text-sm text-gray-400 leading-tight">
-                    AGENCIES (W.I.G)
+                    AGENCIES (NIG.)
                   </span>
                 </div>
               </div>
