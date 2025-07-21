@@ -8,7 +8,7 @@ interface PageBannerProps {
 export default function PageBanner({
   title,
   subtitle,
-  backgroundImage = "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  backgroundImage = "https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2Ffc8c83fe926f4c9cb82c2681a7881f7a",
   height = "medium",
 }: PageBannerProps) {
   const heightClasses = {
