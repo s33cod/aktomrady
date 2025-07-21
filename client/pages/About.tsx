@@ -190,7 +190,7 @@ export default function About() {
       <section
         className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F38c5ab870ac54599b5af8dde96f1a993)`
+          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F38c5ab870ac54599b5af8dde96f1a993)`,
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
