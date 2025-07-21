@@ -474,18 +474,18 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
               </div>
               <div className="flex space-x-6 text-sm">
-                <a
-                  href="#"
+                <Link
+                  to="/privacy-policy"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Privacy Policy
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/terms-of-service"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Terms of Service
-                </a>
+                </Link>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
