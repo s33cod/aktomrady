@@ -254,21 +254,27 @@ export default function Layout({ children }: LayoutProps) {
                 <h4 className="text-sm font-semibold mb-3 text-gray-300">Follow Us</h4>
                 <div className="flex space-x-3">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/p/Aktomrady-100070072301601/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook size={16} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/aktomradyagenciesnig/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram size={16} />
                   </a>
                   <a
-                    href="#"
+                    href="https://wa.me/2348029477796"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
                     aria-label="WhatsApp"
                   >
