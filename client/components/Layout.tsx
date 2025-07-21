@@ -328,6 +328,11 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </footer>
+
+      {/* Interactive Components */}
+      <BackToTop />
+      <Chatbot />
+      <CookieNotification />
     </div>
   );
 }
