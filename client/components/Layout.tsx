@@ -17,12 +17,16 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">A</span>
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=800"
+                alt="AKTOMRADY Agencies Logo"
+                className="w-10 h-10 object-contain"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-gray-900 leading-tight">AKTOMRADY</span>
+                <span className="text-xs text-gray-500 hidden sm:inline leading-tight">AGENCIES (W.I.G)</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">AKTOMRADY</span>
-              <span className="text-sm text-gray-500 hidden sm:inline">AGENCIES (W.I.G)</span>
             </Link>
 
             {/* Desktop Navigation */}
