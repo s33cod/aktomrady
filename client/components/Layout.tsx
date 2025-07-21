@@ -88,45 +88,57 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
-              <div className="flex flex-col space-y-4">
-                <Link 
-                  to="/" 
-                  className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+            <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-sm">
+              <div className="flex flex-col space-y-2">
+                <Link
+                  to="/"
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Home
+                  <Home size={20} />
+                  <span>Home</span>
                 </Link>
-                <Link 
-                  to="/services" 
-                  className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+                <Link
+                  to="/services"
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Services
+                  <Briefcase size={20} />
+                  <span>Services</span>
                 </Link>
-                <Link 
-                  to="/portfolio" 
-                  className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+                <Link
+                  to="/portfolio"
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Portfolio
+                  <Award size={20} />
+                  <span>Portfolio</span>
                 </Link>
-                <Link 
-                  to="/about" 
-                  className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+                <Link
+                  to="/about"
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  <Users size={20} />
+                  <span>About</span>
                 </Link>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+                <Link
+                  to="/contact"
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  <Phone size={20} />
+                  <span>Contact</span>
                 </Link>
-                <Button className="bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90 w-fit">
-                  Get Quote
+                <Button
+                  className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 w-fit mx-4 text-white font-semibold"
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Link to="/quote" className="flex items-center space-x-2">
+                    <Calculator size={18} />
+                    <span>Get Quote</span>
+                  </Link>
                 </Button>
               </div>
             </div>
