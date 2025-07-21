@@ -30,39 +30,50 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link 
-                to="/" 
-                className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link
+                to="/"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                Home
+                <Home size={18} className="group-hover:text-white transition-colors" />
+                <span>Home</span>
               </Link>
-              <Link 
-                to="/services" 
-                className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+              <Link
+                to="/services"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                Services
+                <Briefcase size={18} className="group-hover:text-white transition-colors" />
+                <span>Services</span>
               </Link>
-              <Link 
-                to="/portfolio" 
-                className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+              <Link
+                to="/portfolio"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                Portfolio
+                <Award size={18} className="group-hover:text-white transition-colors" />
+                <span>Portfolio</span>
               </Link>
-              <Link 
-                to="/about" 
-                className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+              <Link
+                to="/about"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                About
+                <Users size={18} className="group-hover:text-white transition-colors" />
+                <span>About</span>
               </Link>
-              <Link 
-                to="/contact" 
-                className="text-gray-700 hover:text-brand-blue transition-colors font-medium"
+              <Link
+                to="/contact"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta font-medium"
               >
-                Contact
+                <Phone size={18} className="group-hover:text-white transition-colors" />
+                <span>Contact</span>
               </Link>
-              <Button className="bg-gradient-to-r from-brand-blue to-brand-light-blue hover:from-brand-blue/90 hover:to-brand-light-blue/90">
-                Get Quote
+              <Button
+                className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+                asChild
+              >
+                <Link to="/quote" className="flex items-center space-x-2">
+                  <Calculator size={18} />
+                  <span>Get Quote</span>
+                </Link>
               </Button>
             </nav>
 
