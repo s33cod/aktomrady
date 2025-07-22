@@ -39,7 +39,7 @@ export default function Index() {
               Our Comprehensive Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From large format displays to intimate wedding invitations, we
+              From large format displays to intimate invitation cards, we
               provide premium printing solutions trusted by government agencies
               and major corporations.
             </p>
@@ -60,9 +60,9 @@ export default function Index() {
                 icon: "🎁",
               },
               {
-                title: "Wedding Invitations",
+                title: "Invitation Cards",
                 description:
-                  "Elegant invitations for weddings & special events",
+                  "Elegant invitation cards for weddings & special events",
                 icon: "💌",
               },
               {
