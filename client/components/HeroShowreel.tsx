@@ -170,17 +170,17 @@ export default function HeroShowreel() {
           </div>
 
           {/* Current Slide Content */}
-          <div className="mb-8 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <div className="mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 break-words">
               {currentImage.title}
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed px-2">
               {currentImage.description}
             </p>
           </div>
 
           {/* Service Highlights */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
             {[
               { icon: "📢", text: "Large Format Prints" },
               { icon: "🎁", text: "Custom Branded Items" },
@@ -189,27 +189,27 @@ export default function HeroShowreel() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-4 hover:bg-white/20 transition-all duration-300 min-w-0"
               >
-                <div className="text-2xl mb-2">{service.icon}</div>
-                <p className="text-white text-sm font-medium">{service.text}</p>
+                <div className="text-lg sm:text-2xl mb-1 sm:mb-2">{service.icon}</div>
+                <p className="text-white text-xs sm:text-sm font-medium break-words leading-tight">{service.text}</p>
               </div>
             ))}
           </div>
 
           {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-brand-cyan to-brand-magenta hover:from-brand-cyan/90 hover:to-brand-magenta/90 text-white font-semibold px-8 py-4 text-lg shadow-lg"
+              className="bg-gradient-to-r from-brand-cyan to-brand-magenta hover:from-brand-cyan/90 hover:to-brand-magenta/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg w-full sm:w-auto"
               asChild
             >
-              <Link to="/quote">Get Free Quote</Link>
+              <Link to="/services">View Our Services</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-transparent bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text hover:bg-white hover:text-brand-blue font-semibold px-8 py-4 text-lg backdrop-blur-sm"
+              className="border-2 border-white text-transparent bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text hover:bg-white hover:text-brand-blue font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg backdrop-blur-sm w-full sm:w-auto"
               style={{ textShadow: "1px 1px 3px rgba(3, 25, 57, 1)" }}
               asChild
             >
