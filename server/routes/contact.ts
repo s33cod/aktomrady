@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { sendContactEmail } from "../services/email";
 
 interface ContactFormData {
   name: string;
@@ -38,12 +39,7 @@ export async function handleContactForm(req: Request, res: Response) {
       });
     }
 
-    // In a real application, you would:
-    // 1. Send email using a service like Nodemailer, SendGrid, or AWS SES
-    // 2. Store the form submission in a database
-    // 3. Send confirmation emails
-
-    // For now, we'll log the form data and return success
+    // Log the form submission
     console.log("Form submission received:", {
       type: formData.formType,
       name: formData.name,
@@ -54,13 +50,30 @@ export async function handleContactForm(req: Request, res: Response) {
       timestamp: new Date().toISOString(),
     });
 
-    // Simulate email sending
-    const adminEmails = ["info@aktomrady.com", "admin@aktomrady.com"];
-    console.log("Simulating email send to:", adminEmails);
-
     // Generate email content
     const emailContent = generateEmailContent(formData);
-    console.log("Email content:", emailContent);
+    const emailSubject = formData.subject ||
+      (formData.formType === "quote" ? "Quote Request" : "Contact Form");
+
+    // Send actual email
+    const emailResult = await sendContactEmail({
+      name: formData.name,
+      email: formData.email,
+      subject: emailSubject,
+      content: emailContent
+    });
+
+    if (!emailResult.success) {
+      return res.status(500).json({
+        success: false,
+        message: "Failed to send email. Please try again later."
+      });
+    }
+
+    console.log("Email sent successfully to info@aktomrady.com");
+    if (emailResult.previewUrl) {
+      console.log("Development preview URL:", emailResult.previewUrl);
+    }
 
     return res.json({
       success: true,
