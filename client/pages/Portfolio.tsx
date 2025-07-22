@@ -193,30 +193,37 @@ export default function Portfolio() {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Banner */}
       <section
-        className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
+        className="relative py-24 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2Fda0c3c8154524b46b006c50257e6e2aa)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Our Portfolio
+              Our{" "}
+              <span className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent">
+                Portfolio
+              </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Trusted by government agencies, major banks, healthcare
               institutions, and leading corporations across Nigeria.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-lg">
-              <div className="flex items-center">
-                <Users className="w-6 h-6 mr-2" />
-                <span>1000+ Happy Clients</span>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex items-center gap-2 text-brand-cyan">
+                <Users className="w-6 h-6" />
+                <span className="font-semibold">1000+ Happy Clients</span>
               </div>
-              <div className="flex items-center">
-                <Award className="w-6 h-6 mr-2" />
-                <span>5000+ Projects Completed</span>
+              <div className="flex items-center gap-2 text-brand-yellow">
+                <Award className="w-6 h-6" />
+                <span className="font-semibold">5000+ Projects Completed</span>
+              </div>
+              <div className="flex items-center gap-2 text-brand-magenta">
+                <CheckCircle className="w-6 h-6" />
+                <span className="font-semibold">Proven Results</span>
               </div>
             </div>
           </div>
