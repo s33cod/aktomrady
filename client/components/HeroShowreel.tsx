@@ -124,30 +124,30 @@ export default function HeroShowreel() {
       {/* Navigation Controls */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-3"
+        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-2 sm:p-3"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6 text-white" />
+        <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-3"
+        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-2 sm:p-3"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6 text-white" />
+        <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
 
       {/* Play/Pause Control */}
       <button
         onClick={() => setIsPlaying(!isPlaying)}
-        className="absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-3"
+        className="absolute top-2 sm:top-4 right-2 sm:right-4 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-2 sm:p-3"
         aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
       >
         {isPlaying ? (
-          <Pause className="w-5 h-5 text-white" />
+          <Pause className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
         ) : (
-          <Play className="w-5 h-5 text-white" />
+          <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
         )}
       </button>
 
