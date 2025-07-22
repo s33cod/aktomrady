@@ -32,7 +32,7 @@ export default function Portfolio() {
       description:
         "Comprehensive printing solutions for government communications, campaigns, and official materials",
       projects: [
-        "Electoral Materials",
+        "Campaign Materials",
         "Public Awareness Campaigns",
         "Official Documents",
         "Signage & Banners",
