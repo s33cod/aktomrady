@@ -136,6 +136,61 @@ export default function Portfolio() {
     },
   ];
 
+  const internationalClients = [
+    {
+      name: "Liberian Government",
+      category: "International Government",
+      icon: <Landmark className="w-8 h-8" />,
+      description: "Official government communications and materials for Liberia",
+      projects: [
+        "Government Documents",
+        "Official Communications",
+        "Public Information",
+        "Administrative Materials",
+      ],
+      color: "from-blue-600 to-blue-700",
+    },
+    {
+      name: "UK Clients",
+      category: "International Corporate",
+      icon: <Building className="w-8 h-8" />,
+      description: "Corporate printing solutions for UK-based organizations",
+      projects: [
+        "Corporate Materials",
+        "Marketing Collaterals",
+        "Business Communications",
+        "Brand Materials",
+      ],
+      color: "from-red-600 to-red-700",
+    },
+    {
+      name: "Canadian Clients",
+      category: "International Corporate",
+      icon: <Building className="w-8 h-8" />,
+      description: "Printing services for Canadian businesses and organizations",
+      projects: [
+        "Business Materials",
+        "Promotional Items",
+        "Corporate Identity",
+        "Marketing Materials",
+      ],
+      color: "from-green-600 to-green-700",
+    },
+    {
+      name: "American Clients",
+      category: "International Corporate",
+      icon: <Building className="w-8 h-8" />,
+      description: "Comprehensive printing solutions for US-based companies",
+      projects: [
+        "Corporate Materials",
+        "Business Communications",
+        "Marketing Materials",
+        "Brand Development",
+      ],
+      color: "from-indigo-600 to-indigo-700",
+    },
+  ];
+
   const portfolioCategories = [
     {
       id: "government",
