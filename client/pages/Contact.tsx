@@ -217,7 +217,11 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
+<<<<<<< HEAD
                 className="bg-white text-transparent bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text hover:bg-gradient-to-r hover:from-brand-cyan hover:via-brand-magenta hover:to-brand-yellow hover:text-white font-semibold px-8 py-3"
+=======
+                className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow/90 hover:to-brand-magenta/90 text-white font-semibold px-8 py-3"
+>>>>>>> 8722a0c22d1945c66e0cbeaff5cf880180d75cf8
                 asChild
               >
                 <a href="tel:+2348029477796">
@@ -228,7 +232,11 @@ export default function Contact() {
               <Button
                 size="lg"
                 variant="outline"
+<<<<<<< HEAD
                 className="border-white text-transparent bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text hover:bg-white hover:text-brand-blue font-semibold px-8 py-3"
+=======
+                className="border-white text-brand-cyan via-brand-magenta hover:bg-white hover:text-brand-magenta font-semibold px-8 py-3"
+>>>>>>> 8722a0c22d1945c66e0cbeaff5cf880180d75cf8
                 asChild
               >
                 <a

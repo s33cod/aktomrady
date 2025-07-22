@@ -206,6 +206,7 @@ export default function HeroShowreel() {
             >
               <Link to="/quote">Get Free Quote</Link>
             </Button>
+<<<<<<< HEAD
             <Button
               size="lg"
               variant="outline"
@@ -216,6 +217,9 @@ export default function HeroShowreel() {
               <Link to="/portfolio">View Our Work</Link>
             </Button>
           </div>
+=======
+         </div>
+>>>>>>> 8722a0c22d1945c66e0cbeaff5cf880180d75cf8
 
           {/* Contact Info */}
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-white/90">
