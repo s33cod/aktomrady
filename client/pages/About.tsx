@@ -146,7 +146,11 @@ export default function About() {
       role: "Strategy/Management Control",
       description:
         "Strategic planning expert ensuring efficient management control and business optimization.",
-      expertise: ["Strategic Planning", "Management Control", "Business Analysis"],
+      expertise: [
+        "Strategic Planning",
+        "Management Control",
+        "Business Analysis",
+      ],
     },
     {
       name: "Abiala Adejare",
@@ -164,7 +168,11 @@ export default function About() {
       role: "Graphics Specialist",
       description:
         "Creative graphics expert bringing innovative design solutions to every project.",
-      expertise: ["Graphic Design", "Creative Direction", "Visual Communication"],
+      expertise: [
+        "Graphic Design",
+        "Creative Direction",
+        "Visual Communication",
+      ],
     },
     {
       name: "Sunkanmi Gbadamosi",
@@ -182,11 +190,7 @@ export default function About() {
       role: "Client Services",
       description:
         "Client services specialist dedicated to providing exceptional customer support and satisfaction.",
-      expertise: [
-        "Client Relations",
-        "Customer Support",
-        "Service Excellence",
-      ],
+      expertise: ["Client Relations", "Customer Support", "Service Excellence"],
     },
     {
       name: "Funmi Ibirogba",
@@ -285,8 +289,8 @@ export default function About() {
                 AKTOMRADY Agencies was born from a simple vision: to provide
                 Nigeria with world-class printing services that rival
                 international standards. Founded in 2018 by industry veteran
-                Abiala Akinyemi Zacheaus, we started as a small printing shop with big
-                dreams and an unwavering commitment to quality.
+                Abiala Akinyemi Zacheaus, we started as a small printing shop
+                with big dreams and an unwavering commitment to quality.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-6">

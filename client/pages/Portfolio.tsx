@@ -125,7 +125,8 @@ export default function Portfolio() {
       name: "Iganmode Day Ota",
       category: "Cultural Events",
       icon: <Building2 className="w-8 h-8" />,
-      description: "Annual cultural festival branding and printing services in Ogun State",
+      description:
+        "Annual cultural festival branding and printing services in Ogun State",
       projects: [
         "Event Branding",
         "Festival Materials",
@@ -141,7 +142,8 @@ export default function Portfolio() {
       name: "Liberian Government",
       category: "International Government",
       icon: <Landmark className="w-8 h-8" />,
-      description: "Official government communications and materials for Liberia",
+      description:
+        "Official government communications and materials for Liberia",
       projects: [
         "Government Documents",
         "Official Communications",
@@ -167,7 +169,8 @@ export default function Portfolio() {
       name: "Canadian Clients",
       category: "International Corporate",
       icon: <Building className="w-8 h-8" />,
-      description: "Printing services for Canadian businesses and organizations",
+      description:
+        "Printing services for Canadian businesses and organizations",
       projects: [
         "Business Materials",
         "Promotional Items",
@@ -369,8 +372,8 @@ export default function Portfolio() {
               🌍 International Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Extending our excellence beyond Nigeria's borders, serving clients across
-              continents with world-class printing solutions.
+              Extending our excellence beyond Nigeria's borders, serving clients
+              across continents with world-class printing solutions.
             </p>
           </div>
 
