@@ -152,18 +152,18 @@ export default function HeroShowreel() {
       </button>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-full">
         <div className="max-w-5xl mx-auto">
           {/* Main Headlines */}
-          <div className="mb-8">
-            <div className="inline-block bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent mb-4">
-              <span className="text-sm font-semibold tracking-wider uppercase">
+          <div className="mb-6 sm:mb-8">
+            <div className="inline-block bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent mb-3 sm:mb-4">
+              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase">
                 {currentImage.category}
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="block">AKTOMRADY AGENCIES</span>
-              <span className="block mt-2 bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
+              <span className="block break-words">AKTOMRADY AGENCIES</span>
+              <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent break-words">
                 ...prints @ its best
               </span>
             </h1>
