@@ -11,7 +11,7 @@ interface EmailData {
 const createTransporter = () => {
   // For production, you would use environment variables for credentials
   // For now, using a generic SMTP configuration that can work with various providers
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     // Using a generic SMTP configuration
     // In production, replace with actual SMTP settings
     host: process.env.SMTP_HOST || "smtp.gmail.com",
@@ -43,7 +43,7 @@ export async function sendContactEmail(
     // For development, create a test account
     if (process.env.NODE_ENV !== "production") {
       const testAccount = await nodemailer.createTestAccount();
-      transporter = nodemailer.createTransporter({
+      transporter = nodemailer.createTransport({
         host: "smtp.ethereal.email",
         port: 587,
         secure: false,
