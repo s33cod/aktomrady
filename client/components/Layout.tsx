@@ -162,58 +162,60 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-sm">
-              <div className="flex flex-col space-y-2">
+            <div className="md:hidden py-3 sm:py-4 border-t border-gray-200 bg-white/95 backdrop-blur-sm max-w-full overflow-hidden">
+              <div className="flex flex-col space-y-1 sm:space-y-2">
                 <Link
                   to="/"
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center space-x-3 px-3 sm:px-4 py-2 sm:py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium text-sm sm:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Home size={20} />
-                  <span>Home</span>
+                  <Home size={18} className="flex-shrink-0" />
+                  <span className="truncate">Home</span>
                 </Link>
                 <Link
                   to="/services"
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center space-x-3 px-3 sm:px-4 py-2 sm:py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium text-sm sm:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Briefcase size={20} />
-                  <span>Services</span>
+                  <Briefcase size={18} className="flex-shrink-0" />
+                  <span className="truncate">Services</span>
                 </Link>
                 <Link
                   to="/portfolio"
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center space-x-3 px-3 sm:px-4 py-2 sm:py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium text-sm sm:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Award size={20} />
-                  <span>Portfolio</span>
+                  <Award size={18} className="flex-shrink-0" />
+                  <span className="truncate">Portfolio</span>
                 </Link>
                 <Link
                   to="/about"
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center space-x-3 px-3 sm:px-4 py-2 sm:py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium text-sm sm:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Users size={20} />
-                  <span>About</span>
+                  <Users size={18} className="flex-shrink-0" />
+                  <span className="truncate">About</span>
                 </Link>
                 <Link
                   to="/contact"
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center space-x-3 px-3 sm:px-4 py-2 sm:py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta transition-all duration-300 rounded-lg font-medium text-sm sm:text-base"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Phone size={20} />
-                  <span>Contact</span>
+                  <Phone size={18} className="flex-shrink-0" />
+                  <span className="truncate">Contact</span>
                 </Link>
-                <Button
-                  className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 w-fit mx-4 text-white font-semibold"
-                  asChild
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Link to="/quote" className="flex items-center space-x-2">
-                    <Calculator size={18} />
-                    <span>Get Quote</span>
-                  </Link>
-                </Button>
+                <div className="px-3 sm:px-4 pt-2">
+                  <Button
+                    className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 w-full text-white font-semibold text-sm sm:text-base"
+                    asChild
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Link to="/quote" className="flex items-center justify-center space-x-2">
+                      <Calculator size={16} className="sm:w-[18px] sm:h-[18px]" />
+                      <span>Get Quote</span>
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           )}
