@@ -374,7 +374,7 @@ export default function Services() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-brand-cyan via-brand-magenta hover:bg-white hover:text-brand-blue font-semibold px-8 py-3"
+              className="border-white text-brand-cyan via-brand-magenta to-brand-yellow hover:bg-white hover:text-brand-blue font-semibold px-8 py-3"
               asChild
             >
               <Link to="/portfolio">View Our Work</Link>
