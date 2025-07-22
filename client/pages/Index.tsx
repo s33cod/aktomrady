@@ -233,7 +233,7 @@ export default function Index() {
                 title: "✔ Fast & Reliable Delivery ⏰",
                 description:
                   "Quick turnaround times with nationwide delivery coverage",
-                icon: "🚚",
+                icon: "����",
               },
               {
                 title: "✔ Friendly Expert Support 🤝",
