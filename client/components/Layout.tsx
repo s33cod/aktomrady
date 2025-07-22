@@ -35,17 +35,17 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       {/* Navigation Header */}
       <header className="relative z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=800"
                 alt="AKTOMRADY Agencies Logo"
-                className="w-10 h-10 object-contain"
+                className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
               />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900 leading-tight">
+              <div className="flex flex-col min-w-0">
+                <span className="text-lg sm:text-xl font-bold text-gray-900 leading-tight truncate">
                   AKTOMRADY
                 </span>
                 <span className="text-xs text-gray-500 hidden sm:inline leading-tight">
