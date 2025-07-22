@@ -226,7 +226,7 @@ export default function Index() {
               {
                 title: "✔ Proven Track Record",
                 description:
-                  "1000+ satisfied clients and 5000+ successful projects completed",
+                  "3000+ satisfied clients and 8000+ successful projects completed",
                 icon: "🏆",
               },
             ].map((feature, index) => (
