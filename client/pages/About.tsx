@@ -208,7 +208,7 @@ export default function About() {
       icon: <Users className="w-6 h-6" />,
     },
     {
-      number: "5000+",
+      number: "8000+",
       label: "Projects Completed",
       icon: <Printer className="w-6 h-6" />,
     },
