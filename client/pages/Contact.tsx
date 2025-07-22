@@ -151,12 +151,20 @@ export default function Contact() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white">
+      {/* Hero Banner */}
+      <section
+        className="relative py-24 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Contact Us
+              Contact{" "}
+              <span className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent">
+                Us
+              </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Ready to bring your printing project to life? Get in touch with
