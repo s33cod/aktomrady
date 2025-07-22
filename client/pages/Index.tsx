@@ -143,6 +143,12 @@ export default function Index() {
                 description:
                   "Enterprise banking solutions and promotional materials",
               },
+              {
+                title: "🎭 Iganmode Day Ota",
+                category: "Cultural Events",
+                description:
+                  "Annual cultural festival branding and promotional materials in Ogun State",
+              },
             ].map((client, index) => (
               <div
                 key={index}
