@@ -228,7 +228,7 @@ export default function Contact() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-brand-magenta font-semibold px-8 py-3"
+                className="border-white text-brand-cyan via-brand-magenta to-brand-yellow hover:bg-white hover:text-brand-magenta font-semibold px-8 py-3"
                 asChild
               >
                 <a
