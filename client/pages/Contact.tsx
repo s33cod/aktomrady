@@ -60,14 +60,14 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           ...contactForm,
-          formType: "contact",
+          formType: 'contact'
         }),
       });
 
@@ -84,13 +84,11 @@ export default function Contact() {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert(result.message || "Failed to send message. Please try again.");
+        alert(result.message || 'Failed to send message. Please try again.');
       }
     } catch (error) {
-      console.error("Contact form error:", error);
-      alert(
-        "Failed to send message. Please check your connection and try again.",
-      );
+      console.error('Contact form error:', error);
+      alert('Failed to send message. Please check your connection and try again.');
     }
 
     setIsSubmitting(false);
@@ -101,15 +99,15 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           ...quoteForm,
           message: quoteForm.description,
-          formType: "quote",
+          formType: 'quote'
         }),
       });
 
@@ -130,15 +128,11 @@ export default function Contact() {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert(
-          result.message || "Failed to send quote request. Please try again.",
-        );
+        alert(result.message || 'Failed to send quote request. Please try again.');
       }
     } catch (error) {
-      console.error("Quote form error:", error);
-      alert(
-        "Failed to send quote request. Please check your connection and try again.",
-      );
+      console.error('Quote form error:', error);
+      alert('Failed to send quote request. Please check your connection and try again.');
     }
 
     setIsSubmitting(false);
@@ -183,7 +177,7 @@ export default function Contact() {
     "Large Format Prints",
     "Business Cards",
     "Banners & Billboards",
-    "Wedding Invitations",
+    "Invitation Cards",
     "Flyers & Brochures",
     "Custom Branded Items",
     "Corporate Materials",
@@ -277,10 +271,7 @@ export default function Contact() {
                   <div className="space-y-2">
                     {info.details.map((detail, detailIndex) => {
                       // Check if this is an email
-                      if (
-                        info.title === "Email Addresses" &&
-                        detail.includes("@")
-                      ) {
+                      if (info.title === "Email Addresses" && detail.includes("@")) {
                         return (
                           <p key={detailIndex} className="text-sm">
                             <a
@@ -293,10 +284,7 @@ export default function Contact() {
                         );
                       }
                       // Check if this is a phone number
-                      if (
-                        info.title === "Phone Number" &&
-                        detail.startsWith("+")
-                      ) {
+                      if (info.title === "Phone Number" && detail.startsWith("+")) {
                         return (
                           <p key={detailIndex} className="text-sm">
                             <a
