@@ -149,6 +149,18 @@ export default function Index() {
                 description:
                   "Annual cultural festival branding and promotional materials in Ogun State",
               },
+              {
+                title: "🌍 Liberian Government",
+                category: "International",
+                description:
+                  "Official government communications and printing services for Liberia",
+              },
+              {
+                title: "🇺🇸 American Clients",
+                category: "International",
+                description:
+                  "Corporate printing solutions for US-based businesses and organizations",
+              },
             ].map((client, index) => (
               <div
                 key={index}
