@@ -211,7 +211,7 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 text-white font-semibold px-8 py-3"
+                className="bg-white text-transparent bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text hover:bg-gradient-to-r hover:from-brand-cyan hover:via-brand-magenta hover:to-brand-yellow hover:text-white font-semibold px-8 py-3"
                 asChild
               >
                 <a href="tel:+2348029477796">
