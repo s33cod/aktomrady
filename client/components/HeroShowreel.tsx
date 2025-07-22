@@ -204,15 +204,7 @@ export default function HeroShowreel() {
               className="bg-gradient-to-r from-brand-cyan to-brand-magenta hover:from-brand-cyan/90 hover:to-brand-magenta/90 text-white font-semibold px-8 py-4 text-lg shadow-lg"
               asChild
             >
-              <Link to="/quote">Get Free Quote</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 text-lg backdrop-blur-sm"
-              asChild
-            >
-              <Link to="/portfolio">View Our Work</Link>
+              <Link to="/services">View Our Services</Link>
             </Button>
           </div>
 
