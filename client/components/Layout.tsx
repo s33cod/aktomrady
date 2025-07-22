@@ -224,59 +224,59 @@ export default function Layout({ children }: LayoutProps) {
       <main className="flex-grow">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           {/* Main Footer Content */}
-          <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Company Info */}
-            <div className="col-span-1 lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-2">
+              <div className="flex items-center space-x-3 mb-4 sm:mb-6">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=800"
                   alt="AKTOMRADY Agencies Logo"
-                  className="w-10 h-10 object-contain"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
                 />
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold leading-tight">
+                <div className="flex flex-col min-w-0">
+                  <span className="text-lg sm:text-xl font-bold leading-tight truncate">
                     AKTOMRADY
                   </span>
-                  <span className="text-sm text-gray-400 leading-tight">
+                  <span className="text-xs sm:text-sm text-gray-400 leading-tight">
                     AGENCIES (NIG.)
                   </span>
                 </div>
               </div>
-              <p className="text-gray-300 mb-6 max-w-md">
+              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
                 Nigeria's trusted printing partner offering premium quality
                 large format prints, custom branded items, business materials,
                 and comprehensive printing solutions for government agencies,
                 corporations, and individuals.
               </p>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-xs sm:text-sm">
                 <p className="flex items-center text-gray-300">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  Trusted by Lagos State Government
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                  <span className="truncate">Trusted by Lagos State Government</span>
                 </p>
                 <p className="flex items-center text-gray-300">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  Serving Major Banks & Corporations
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                  <span className="truncate">Serving Major Banks & Corporations</span>
                 </p>
                 <p className="flex items-center text-gray-300">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  3000+ Happy Clients Nationwide
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                  <span className="truncate">3000+ Happy Clients Nationwide</span>
                 </p>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
-              <div className="space-y-4 text-sm">
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Contact Info</h3>
+              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Phone Numbers:</p>
                   <p className="text-white">
                     <a
                       href="tel:+2348029477796"
-                      className="hover:text-brand-cyan transition-colors"
+                      className="hover:text-brand-cyan transition-colors break-all"
                     >
                       +234.8029477796
                     </a>
@@ -284,48 +284,50 @@ export default function Layout({ children }: LayoutProps) {
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Email:</p>
-                  <p className="text-white">
-                    <a
-                      href="mailto:info@aktomrady.com"
-                      className="hover:text-brand-cyan transition-colors"
-                    >
-                      info@aktomrady.com
-                    </a>
-                  </p>
-                  <p className="text-white">
-                    <a
-                      href="mailto:aktomradyagencies@yahoo.com"
-                      className="hover:text-brand-cyan transition-colors"
-                    >
-                      aktomradyagencies@yahoo.com
-                    </a>
-                  </p>
+                  <div className="space-y-1">
+                    <p className="text-white">
+                      <a
+                        href="mailto:info@aktomrady.com"
+                        className="hover:text-brand-cyan transition-colors break-all"
+                      >
+                        info@aktomrady.com
+                      </a>
+                    </p>
+                    <p className="text-white">
+                      <a
+                        href="mailto:aktomradyagencies@yahoo.com"
+                        className="hover:text-brand-cyan transition-colors break-all"
+                      >
+                        aktomradyagencies@yahoo.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Business Hours:</p>
-                  <p className="text-white">Mon-Fri: 8:00 AM - 6:00 PM</p>
-                  <p className="text-white">Sat: 9:00 AM - 4:00 PM</p>
+                  <p className="text-white text-xs sm:text-sm">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                  <p className="text-white text-xs sm:text-sm">Sat: 9:00 AM - 4:00 PM</p>
                 </div>
               </div>
             </div>
 
             {/* Office Locations */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Our Offices</h3>
-              <div className="space-y-4 text-sm">
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Our Offices</h3>
+              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Lagos Office:</p>
-                  <p className="text-white">5, Kayode Street, Ogba</p>
-                  <p className="text-white">Lagos Mainland, OGBA LAGOS</p>
+                  <p className="text-white break-words">5, Kayode Street, Ogba</p>
+                  <p className="text-white break-words">Lagos Mainland, OGBA LAGOS</p>
                   <p className="text-white">Nigeria</p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Abuja Office:</p>
-                  <p className="text-white text-sm italic">Coming Soon</p>
+                  <p className="text-white text-xs sm:text-sm italic">Coming Soon</p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Port Harcourt Office:</p>
-                  <p className="text-white text-sm italic">Coming Soon</p>
+                  <p className="text-white text-xs sm:text-sm italic">Coming Soon</p>
                 </div>
               </div>
             </div>
