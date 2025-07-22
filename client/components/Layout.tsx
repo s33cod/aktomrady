@@ -262,7 +262,7 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
                 <p className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  1000+ Happy Clients Nationwide
+                  3000+ Happy Clients Nationwide
                 </p>
               </div>
             </div>
