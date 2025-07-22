@@ -106,7 +106,7 @@ export async function sendContactEmail(
       return {
         success: true,
         messageId: info.messageId,
-        previewUrl: previewUrl || undefined
+        previewUrl: previewUrl || undefined,
       };
     }
 
