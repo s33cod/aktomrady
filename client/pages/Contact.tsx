@@ -59,21 +59,39 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...contactForm,
+          formType: 'contact'
+        }),
+      });
 
-    console.log("Contact form submitted:", contactForm);
-    setSubmitSuccess(true);
-    setContactForm({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        setContactForm({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        alert(result.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      alert('Failed to send message. Please check your connection and try again.');
+    }
+
     setIsSubmitting(false);
-
-    setTimeout(() => setSubmitSuccess(false), 3000);
   };
 
   const handleQuoteSubmit = async (e: React.FormEvent) => {
