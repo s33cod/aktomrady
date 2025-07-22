@@ -186,17 +186,20 @@ export default function About() {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Banner */}
       <section
-        className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
+        className="relative py-24 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F38c5ab870ac54599b5af8dde96f1a993)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              About AKTOMRADY
+              About{" "}
+              <span className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent">
+                AKTOMRADY
+              </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Nigeria's trusted printing partner since 2018. We've grown from a
