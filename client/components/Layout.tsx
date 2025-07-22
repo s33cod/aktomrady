@@ -11,6 +11,7 @@ import {
   Users,
   Phone,
   Calculator,
+  Music,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -465,6 +466,15 @@ export default function Layout({ children }: LayoutProps) {
                     aria-label="WhatsApp"
                   >
                     <MessageCircle size={16} />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@aktomrady"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
+                    aria-label="TikTok"
+                  >
+                    <Music size={16} />
                   </a>
                 </div>
               </div>
