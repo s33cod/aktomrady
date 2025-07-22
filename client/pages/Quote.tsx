@@ -61,16 +61,16 @@ export default function Quote() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...quoteForm,
           message: quoteForm.description,
-          service: quoteForm.services.join(', '),
-          formType: 'quote'
+          service: quoteForm.services.join(", "),
+          formType: "quote",
         }),
       });
 
@@ -99,11 +99,15 @@ export default function Quote() {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert(result.message || 'Failed to send quote request. Please try again.');
+        alert(
+          result.message || "Failed to send quote request. Please try again.",
+        );
       }
     } catch (error) {
-      console.error('Quote form error:', error);
-      alert('Failed to send quote request. Please check your connection and try again.');
+      console.error("Quote form error:", error);
+      alert(
+        "Failed to send quote request. Please check your connection and try again.",
+      );
     }
 
     setIsSubmitting(false);
