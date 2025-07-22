@@ -120,21 +120,39 @@ export default function About() {
 
   const team = [
     {
-      name: "Abiala Akinyemi Zacheaus",
-      role: "Founder & Owner",
+      name: "Abiala Akindele Oluwaseun Jame",
+      role: "MD CEO",
       description:
-        "Visionary leader with 15+ years in printing industry, committed to delivering excellence across Nigeria.",
+        "Managing Director and CEO leading the company with strategic vision and innovative leadership.",
       expertise: [
         "Strategic Leadership",
         "Business Development",
-        "Client Relations",
+        "Executive Management",
       ],
     },
     {
-      name: "Abiala",
+      name: "Abiala Omolade Esther",
+      role: "Managing Director",
+      description:
+        "Managing Director overseeing daily operations and ensuring excellence in service delivery.",
+      expertise: [
+        "Operations Management",
+        "Strategic Planning",
+        "Team Leadership",
+      ],
+    },
+    {
+      name: "Bola Adelani",
+      role: "Strategy/Management Control",
+      description:
+        "Strategic planning expert ensuring efficient management control and business optimization.",
+      expertise: ["Strategic Planning", "Management Control", "Business Analysis"],
+    },
+    {
+      name: "Abiala Adejare",
       role: "Head of Operations",
       description:
-        "Operations expert ensuring smooth workflow and quality control across all our facilities.",
+        "Operations leader ensuring smooth workflow and quality control across all facilities.",
       expertise: [
         "Operations Management",
         "Quality Control",
@@ -142,21 +160,43 @@ export default function About() {
       ],
     },
     {
-      name: "James",
-      role: "Creative Director",
+      name: "Ayanyemi Musibau",
+      role: "Graphics Specialist",
       description:
-        "Creative genius behind our design solutions, helping clients bring their vision to life.",
-      expertise: ["Graphic Design", "Brand Identity", "Creative Strategy"],
+        "Creative graphics expert bringing innovative design solutions to every project.",
+      expertise: ["Graphic Design", "Creative Direction", "Visual Communication"],
     },
     {
-      name: "Niyi",
-      role: "Customer Success Manager",
+      name: "Sunkanmi Gbadamosi",
+      role: "Chief Operator",
       description:
-        "Dedicated to ensuring every client receives exceptional service and support throughout their journey.",
+        "Chief operator managing production processes and ensuring timely delivery.",
       expertise: [
-        "Client Support",
-        "Project Management",
+        "Production Management",
+        "Quality Assurance",
+        "Process Coordination",
+      ],
+    },
+    {
+      name: "Damilare Adebesin",
+      role: "Client Services",
+      description:
+        "Client services specialist dedicated to providing exceptional customer support and satisfaction.",
+      expertise: [
+        "Client Relations",
+        "Customer Support",
+        "Service Excellence",
+      ],
+    },
+    {
+      name: "Funmi Ibirogba",
+      role: "Client Services",
+      description:
+        "Client services expert ensuring every customer receives personalized attention and support.",
+      expertise: [
         "Customer Experience",
+        "Client Support",
+        "Relationship Management",
       ],
     },
   ];
