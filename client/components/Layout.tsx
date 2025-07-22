@@ -334,17 +334,17 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           {/* Quick Links */}
-          <div className="py-6 border-t border-gray-800">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+          <div className="py-4 sm:py-6 border-t border-gray-800">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-4 sm:mb-6">
+              <div className="min-w-0">
+                <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-300">
                   Services
                 </h4>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li>
                     <Link
                       to="/services"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Large Format Prints
                     </Link>
@@ -352,7 +352,7 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <Link
                       to="/services"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Business Cards
                     </Link>
@@ -360,30 +360,30 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <Link
                       to="/services"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
-                      Wedding Invitations
+                      Invitation Cards
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/services"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Custom Branded Items
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+              <div className="min-w-0">
+                <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-300">
                   Company
                 </h4>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li>
                     <Link
                       to="/about"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       About Us
                     </Link>
@@ -391,7 +391,7 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <Link
                       to="/portfolio"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Portfolio
                     </Link>
@@ -399,22 +399,22 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <Link
                       to="/contact"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Contact
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+              <div className="min-w-0">
+                <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-300">
                   Support
                 </h4>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li>
                     <a
-                      href="tel:+2348134466334"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      href="tel:+2348029477796"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Call Support
                     </a>
@@ -422,7 +422,7 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <a
                       href="mailto:support@aktomrady.com"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Email Support
                     </a>
@@ -430,53 +430,53 @@ export default function Layout({ children }: LayoutProps) {
                   <li>
                     <Link
                       to="/contact"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block truncate"
                     >
                       Get Quote
                     </Link>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h4 className="text-sm font-semibold mb-3 text-gray-300">
+              <div className="min-w-0">
+                <h4 className="text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-300">
                   Follow Us
                 </h4>
-                <div className="flex space-x-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   <a
                     href="https://www.facebook.com/p/Aktomrady-100070072301601/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors flex-shrink-0"
                     aria-label="Facebook"
                   >
-                    <Facebook size={16} />
+                    <Facebook size={14} className="sm:w-4 sm:h-4" />
                   </a>
                   <a
                     href="https://www.instagram.com/aktomradyagenciesnig/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors flex-shrink-0"
                     aria-label="Instagram"
                   >
-                    <Instagram size={16} />
+                    <Instagram size={14} className="sm:w-4 sm:h-4" />
                   </a>
                   <a
                     href="https://wa.me/2348029477796"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors flex-shrink-0"
                     aria-label="WhatsApp"
                   >
-                    <MessageCircle size={16} />
+                    <MessageCircle size={14} className="sm:w-4 sm:h-4" />
                   </a>
                   <a
                     href="https://www.tiktok.com/@aktomrady"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors flex-shrink-0"
                     aria-label="TikTok"
                   >
-                    <X size={16} />
+                    <X size={14} className="sm:w-4 sm:h-4" />
                   </a>
                 </div>
               </div>
