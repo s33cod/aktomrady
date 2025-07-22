@@ -60,7 +60,7 @@ export default function Layout({ children }: LayoutProps) {
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
                   isActiveLink("/")
                     ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
-                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
+                    : "text-gray-700 visited:text-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Home
@@ -76,7 +76,7 @@ export default function Layout({ children }: LayoutProps) {
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
                   isActiveLink("/services")
                     ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
-                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
+                    : "text-gray-700 visited:text-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Briefcase
@@ -94,7 +94,7 @@ export default function Layout({ children }: LayoutProps) {
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
                   isActiveLink("/portfolio")
                     ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
-                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
+                    : "text-gray-700 visited:text-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Award
@@ -112,7 +112,7 @@ export default function Layout({ children }: LayoutProps) {
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
                   isActiveLink("/about")
                     ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
-                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
+                    : "text-gray-700 visited:text-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Users
@@ -130,7 +130,7 @@ export default function Layout({ children }: LayoutProps) {
                 className={`group flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 font-medium ${
                   isActiveLink("/contact")
                     ? "bg-gradient-to-r from-brand-cyan to-brand-magenta text-white"
-                    : "text-gray-700 visited:text-brand-magenta/80 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
+                    : "text-gray-700 visited:text-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-magenta"
                 }`}
               >
                 <Phone
