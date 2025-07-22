@@ -484,29 +484,29 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="py-6 border-t border-gray-800">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="mb-4 md:mb-0">
-                <p className="text-sm text-gray-400">
+          <div className="py-4 sm:py-6 border-t border-gray-800">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+              <div className="order-2 sm:order-1">
+                <p className="text-xs sm:text-sm text-gray-400 text-center sm:text-left">
                   Copyright 2025 © AKTOMRADY Agencies. All Rights Reserved
                 </p>
               </div>
-              <div className="flex space-x-6 text-sm">
+              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-6 text-xs sm:text-sm order-1 sm:order-2">
                 <Link
                   to="/privacy-policy"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors whitespace-nowrap"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   to="/terms-of-service"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors whitespace-nowrap"
                 >
                   Terms of Service
                 </Link>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors whitespace-nowrap"
                 >
                   Sitemap
                 </a>
