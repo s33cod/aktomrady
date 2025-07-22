@@ -98,25 +98,44 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...quoteForm,
+          message: quoteForm.description,
+          formType: 'quote'
+        }),
+      });
 
-    console.log("Quote form submitted:", quoteForm);
-    setSubmitSuccess(true);
-    setQuoteForm({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      quantity: "",
-      timeline: "",
-      description: "",
-      budget: "",
-    });
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        setQuoteForm({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          quantity: "",
+          timeline: "",
+          description: "",
+          budget: "",
+        });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        alert(result.message || 'Failed to send quote request. Please try again.');
+      }
+    } catch (error) {
+      console.error('Quote form error:', error);
+      alert('Failed to send quote request. Please check your connection and try again.');
+    }
+
     setIsSubmitting(false);
-
-    setTimeout(() => setSubmitSuccess(false), 3000);
   };
 
   const contactInfo = [
