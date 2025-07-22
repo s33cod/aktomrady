@@ -8,7 +8,7 @@ interface PageBannerProps {
 export default function PageBanner({
   title,
   subtitle,
-  backgroundImage = "https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2Ffc8c83fe926f4c9cb82c2681a7881f7a",
+  backgroundImage = "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=1600",
   height = "medium",
 }: PageBannerProps) {
   const heightClasses = {
@@ -21,13 +21,15 @@ export default function PageBanner({
     <section
       className={`relative ${heightClasses[height]} bg-cover bg-center bg-no-repeat`}
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundImage})`,
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            {title}
+            <span className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow bg-clip-text text-transparent">
+              {title}
+            </span>
           </h1>
           {subtitle && (
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
