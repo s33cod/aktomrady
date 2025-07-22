@@ -163,7 +163,7 @@ export default function Portfolio() {
       title: "Commercial Printing",
       description:
         "Business cards, flyers, brochures, and promotional materials",
-      count: "1000+ Projects",
+      count: "3000+ Projects",
     },
   ];
 
@@ -215,7 +215,7 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2 text-brand-cyan">
                 <Users className="w-6 h-6" />
-                <span className="font-semibold">1000+ Happy Clients</span>
+                <span className="font-semibold">3000+ Happy Clients</span>
               </div>
               <div className="flex items-center gap-2 text-brand-yellow">
                 <Award className="w-6 h-6" />
