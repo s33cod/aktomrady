@@ -184,7 +184,7 @@ export default function HeroShowreel() {
             {[
               { icon: "📢", text: "Large Format Prints" },
               { icon: "🎁", text: "Custom Branded Items" },
-              { icon: "💌", text: "Wedding Invitations" },
+              { icon: "💌", text: "Invitation Cards" },
               { icon: "💼", text: "Business Materials" },
             ].map((service, index) => (
               <div
@@ -201,11 +201,10 @@ export default function HeroShowreel() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              variant="primary"
               className="bg-gradient-to-r from-brand-cyan to-brand-magenta hover:from-brand-cyan/90 hover:to-brand-magenta/90 text-white font-semibold px-8 py-4 text-lg shadow-lg"
               asChild
             >
-              <Link to="/services">View Our Services</Link>
+              <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button
               size="lg"
@@ -214,7 +213,7 @@ export default function HeroShowreel() {
               style={{ textShadow: "1px 1px 3px rgba(3, 25, 57, 1)" }}
               asChild
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/portfolio">View Our Work</Link>
             </Button>
           </div>
 
