@@ -181,8 +181,8 @@ export default function Portfolio() {
 
   const internationalClients = [
     {
-      name: "Liberian Government",
-      category: "International Government",
+      name: "Liberian Clients",
+      category: "International Clients",
       icon: <Landmark className="w-8 h-8" />,
       description:
         "Official government communications and materials for Liberia",
