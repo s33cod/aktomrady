@@ -219,7 +219,7 @@ export default function Portfolio() {
               </div>
               <div className="flex items-center gap-2 text-brand-yellow">
                 <Award className="w-6 h-6" />
-                <span className="font-semibold">5000+ Projects Completed</span>
+                <span className="font-semibold">8000+ Projects Completed</span>
               </div>
               <div className="flex items-center gap-2 text-brand-magenta">
                 <CheckCircle className="w-6 h-6" />
