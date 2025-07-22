@@ -243,8 +243,9 @@ export default function Index() {
           <Button
             size="lg"
             className="bg-white text-brand-blue hover:bg-white/90 font-semibold px-8 py-3"
+            asChild
           >
-            Get Your Free Quote
+            <Link to="/quote">Get Your Free Quote</Link>
           </Button>
         </div>
       </section>
