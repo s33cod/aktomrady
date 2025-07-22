@@ -138,4 +138,17 @@
     content: "📧";
     font-size: 0.875rem;
   }
+
+  /* Fix CTA button text visibility issues */
+  .bg-white button,
+  .bg-white a,
+  button.bg-white,
+  a.bg-white {
+    color: hsl(var(--brand-cyan)) !important;
+  }
+
+  button.bg-white:hover,
+  a.bg-white:hover {
+    color: hsl(var(--brand-magenta)) !important;
+  }
 }
