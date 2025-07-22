@@ -54,6 +54,48 @@ export default function Portfolio() {
       color: "from-green-600 to-green-700",
     },
     {
+      name: "LBSL",
+      category: "Lagos State Agency",
+      icon: <Building2 className="w-8 h-8" />,
+      description:
+        "Lagos Bus Services Limited - Public transportation printing solutions and branding",
+      projects: [
+        "Bus Fleet Branding",
+        "Route Information",
+        "Passenger Materials",
+        "Administrative Documents",
+      ],
+      color: "from-blue-600 to-blue-700",
+    },
+    {
+      name: "SCRPS",
+      category: "Lagos State Agency",
+      icon: <Building2 className="w-8 h-8" />,
+      description:
+        "State Civil Registration and Pension Service - Official documentation and materials",
+      projects: [
+        "Registration Forms",
+        "Pension Documents",
+        "Official Materials",
+        "Public Information",
+      ],
+      color: "from-teal-600 to-teal-700",
+    },
+    {
+      name: "LASRRA",
+      category: "Lagos State Agency",
+      icon: <Building2 className="w-8 h-8" />,
+      description:
+        "Lagos State Residents Registration Agency - Resident identification and documentation",
+      projects: [
+        "ID Card Materials",
+        "Registration Forms",
+        "Public Awareness",
+        "Administrative Materials",
+      ],
+      color: "from-indigo-600 to-indigo-700",
+    },
+    {
       name: "JAADOL Homes",
       category: "Real Estate",
       icon: <Home className="w-8 h-8" />,
