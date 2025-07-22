@@ -62,8 +62,8 @@ export default function About() {
     },
     {
       year: "2024",
-      title: "1000+ Clients",
-      description: "Reached milestone of serving over 1000 satisfied clients",
+      title: "3000+ Clients",
+      description: "Reached milestone of serving over 3000 satisfied clients",
     },
     {
       year: "2025",
@@ -203,7 +203,7 @@ export default function About() {
 
   const stats = [
     {
-      number: "1000+",
+      number: "3000+",
       label: "Happy Clients",
       icon: <Users className="w-6 h-6" />,
     },
