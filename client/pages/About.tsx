@@ -120,7 +120,7 @@ export default function About() {
 
   const team = [
     {
-      name: "Akindele",
+      name: "Abiala Akinyemi Zacheaus",
       role: "Founder & Owner",
       description:
         "Visionary leader with 15+ years in printing industry, committed to delivering excellence across Nigeria.",
@@ -245,7 +245,7 @@ export default function About() {
                 AKTOMRADY Agencies was born from a simple vision: to provide
                 Nigeria with world-class printing services that rival
                 international standards. Founded in 2018 by industry veteran
-                Adebayo Ogundimu, we started as a small printing shop with big
+                Abiala Akinyemi Zacheaus, we started as a small printing shop with big
                 dreams and an unwavering commitment to quality.
               </p>
 
