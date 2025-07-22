@@ -232,11 +232,40 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-sm text-gray-600">
-                        {detail}
-                      </p>
-                    ))}
+                    {info.details.map((detail, detailIndex) => {
+                      // Check if this is an email
+                      if (info.title === "Email Addresses" && detail.includes("@")) {
+                        return (
+                          <p key={detailIndex} className="text-sm">
+                            <a
+                              href={`mailto:${detail}`}
+                              className="text-brand-cyan hover:text-brand-magenta transition-colors font-medium"
+                            >
+                              {detail}
+                            </a>
+                          </p>
+                        );
+                      }
+                      // Check if this is a phone number
+                      if (info.title === "Phone Number" && detail.startsWith("+")) {
+                        return (
+                          <p key={detailIndex} className="text-sm">
+                            <a
+                              href={`tel:${detail.replace(/\./g, "")}`}
+                              className="text-brand-cyan hover:text-brand-magenta transition-colors font-medium"
+                            >
+                              {detail}
+                            </a>
+                          </p>
+                        );
+                      }
+                      // Regular text for other details
+                      return (
+                        <p key={detailIndex} className="text-sm text-gray-600">
+                          {detail}
+                        </p>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
