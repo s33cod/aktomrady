@@ -60,14 +60,53 @@ export default function Quote() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...quoteForm,
+          message: quoteForm.description,
+          service: quoteForm.services.join(', '),
+          formType: 'quote'
+        }),
+      });
 
-    console.log("Quote form submitted:", quoteForm);
-    setSubmitSuccess(true);
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        // Reset form
+        setQuoteForm({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          services: [],
+          projectType: "",
+          quantity: "",
+          dimensions: "",
+          colors: "",
+          timeline: "",
+          description: "",
+          budget: "",
+          deliveryAddress: "",
+          additionalServices: [],
+          hasDesign: "",
+          designFile: null,
+        });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        alert(result.message || 'Failed to send quote request. Please try again.');
+      }
+    } catch (error) {
+      console.error('Quote form error:', error);
+      alert('Failed to send quote request. Please check your connection and try again.');
+    }
+
     setIsSubmitting(false);
-
-    setTimeout(() => setSubmitSuccess(false), 5000);
   };
 
   const handleServiceChange = (service: string, checked: boolean) => {
