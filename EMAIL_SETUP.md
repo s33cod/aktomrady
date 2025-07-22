@@ -1,6 +1,7 @@
 # Email Setup Guide for AKTOMRADY Website
 
 ## Current Status
+
 ✅ Email functionality is now implemented!
 ✅ Forms will send emails to `info@aktomrady.com` with CC to `admin@aktomrady.com`
 ✅ Development mode uses test email accounts (Ethereal Email) for testing
@@ -8,7 +9,9 @@
 ## For Production Email Setup
 
 ### Step 1: Choose Your Email Provider
+
 You can use any SMTP email provider:
+
 - Gmail (recommended for ease of setup)
 - Outlook/Hotmail
 - Yahoo Mail
@@ -17,15 +20,18 @@ You can use any SMTP email provider:
 ### Step 2: Get SMTP Credentials
 
 #### For Gmail:
+
 1. Enable 2-Factor Authentication on your Google Account
 2. Go to Google Account Settings → Security
 3. Generate an "App Password" for "Mail"
 4. Use your Gmail address and the generated app password
 
 #### For Other Providers:
+
 Check your email provider's SMTP settings documentation.
 
 ### Step 3: Set Environment Variables
+
 Create a `.env` file in your project root:
 
 ```env
@@ -37,6 +43,7 @@ NODE_ENV=production
 ```
 
 ### Step 4: Test the Setup
+
 1. Submit a form on your website
 2. Check that emails arrive at info@aktomrady.com
 3. Check server logs for any errors
@@ -44,6 +51,7 @@ NODE_ENV=production
 ## Development Testing
 
 In development mode:
+
 - Uses Ethereal Email test accounts
 - Emails are not actually sent
 - Preview URLs are logged to console
@@ -63,7 +71,6 @@ In development mode:
 
 1. **Contact Form** (Contact page)
    - Name, Email, Phone, Subject, Message
-   
 2. **Quote Request Form** (Contact page & Quote page)
    - All contact info plus project details
    - Services, quantity, timeline, budget

@@ -52,7 +52,8 @@ export async function handleContactForm(req: Request, res: Response) {
 
     // Generate email content
     const emailContent = generateEmailContent(formData);
-    const emailSubject = formData.subject ||
+    const emailSubject =
+      formData.subject ||
       (formData.formType === "quote" ? "Quote Request" : "Contact Form");
 
     // Send actual email
@@ -60,13 +61,13 @@ export async function handleContactForm(req: Request, res: Response) {
       name: formData.name,
       email: formData.email,
       subject: emailSubject,
-      content: emailContent
+      content: emailContent,
     });
 
     if (!emailResult.success) {
       return res.status(500).json({
         success: false,
-        message: "Failed to send email. Please try again later."
+        message: "Failed to send email. Please try again later.",
       });
     }
 

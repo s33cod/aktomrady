@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 interface EmailData {
   name: string;
@@ -14,35 +14,37 @@ const createTransporter = () => {
   return nodemailer.createTransporter({
     // Using a generic SMTP configuration
     // In production, replace with actual SMTP settings
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '587'),
+    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    port: parseInt(process.env.SMTP_PORT || "587"),
     secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.SMTP_USER || 'your-email@gmail.com',
-      pass: process.env.SMTP_PASS || 'your-app-password'
+      user: process.env.SMTP_USER || "your-email@gmail.com",
+      pass: process.env.SMTP_PASS || "your-app-password",
     },
     // For development/testing, we'll create a test account
-    ...(process.env.NODE_ENV !== 'production' && {
-      host: 'smtp.ethereal.email',
+    ...(process.env.NODE_ENV !== "production" && {
+      host: "smtp.ethereal.email",
       port: 587,
       secure: false,
       auth: {
-        user: 'ethereal.user@ethereal.email',
-        pass: 'ethereal.pass'
-      }
-    })
+        user: "ethereal.user@ethereal.email",
+        pass: "ethereal.pass",
+      },
+    }),
   });
 };
 
-export async function sendContactEmail(emailData: EmailData): Promise<{ success: boolean; messageId?: string; previewUrl?: string }> {
+export async function sendContactEmail(
+  emailData: EmailData,
+): Promise<{ success: boolean; messageId?: string; previewUrl?: string }> {
   try {
     let transporter;
 
     // For development, create a test account
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== "production") {
       const testAccount = await nodemailer.createTestAccount();
       transporter = nodemailer.createTransporter({
-        host: 'smtp.ethereal.email',
+        host: "smtp.ethereal.email",
         port: 587,
         secure: false,
         auth: {
@@ -55,9 +57,9 @@ export async function sendContactEmail(emailData: EmailData): Promise<{ success:
     }
 
     const mailOptions = {
-      from: `"AKTOMRADY Website" <${process.env.SMTP_USER || 'noreply@aktomrady.com'}>`,
-      to: 'info@aktomrady.com',
-      cc: 'admin@aktomrady.com', // CC to admin email
+      from: `"AKTOMRADY Website" <${process.env.SMTP_USER || "noreply@aktomrady.com"}>`,
+      to: "info@aktomrady.com",
+      cc: "admin@aktomrady.com", // CC to admin email
       subject: `[AKTOMRADY Website] ${emailData.subject}`,
       text: emailData.content,
       html: `
@@ -79,7 +81,7 @@ export async function sendContactEmail(emailData: EmailData): Promise<{ success:
             <div style="margin: 20px 0;">
               <h3 style="color: #374151;">Message Content:</h3>
               <div style="white-space: pre-wrap; background: #f9fafb; padding: 15px; border-radius: 8px; border-left: 4px solid #0891b2;">
-                ${emailData.content.replace(/\n/g, '<br>')}
+                ${emailData.content.replace(/\n/g, "<br>")}
               </div>
             </div>
             
@@ -90,23 +92,23 @@ export async function sendContactEmail(emailData: EmailData): Promise<{ success:
           </div>
         </div>
       `,
-      replyTo: emailData.email
+      replyTo: emailData.email,
     };
 
     const info = await transporter.sendMail(mailOptions);
-    
-    console.log('Email sent successfully:', info.messageId);
-    
+
+    console.log("Email sent successfully:", info.messageId);
+
     // For development, show preview URL
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== "production") {
       const previewUrl = nodemailer.getTestMessageUrl(info);
-      console.log('Preview URL:', previewUrl);
+      console.log("Preview URL:", previewUrl);
       return { success: true, messageId: info.messageId, previewUrl };
     }
 
     return { success: true, messageId: info.messageId };
   } catch (error) {
-    console.error('Email sending failed:', error);
+    console.error("Email sending failed:", error);
     return { success: false };
   }
 }
