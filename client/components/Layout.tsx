@@ -474,7 +474,7 @@ export default function Layout({ children }: LayoutProps) {
                     className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
                     aria-label="TikTok"
                   >
-                    <Music size={16} />
+                    <X size={16} />
                   </a>
                 </div>
               </div>
