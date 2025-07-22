@@ -121,6 +121,19 @@ export default function Portfolio() {
       ],
       color: "from-yellow-600 to-yellow-700",
     },
+    {
+      name: "Iganmode Day Ota",
+      category: "Cultural Events",
+      icon: <Building2 className="w-8 h-8" />,
+      description: "Annual cultural festival branding and printing services in Ogun State",
+      projects: [
+        "Event Branding",
+        "Festival Materials",
+        "Promotional Banners",
+        "Cultural Signage",
+      ],
+      color: "from-purple-600 to-purple-700",
+    },
   ];
 
   const portfolioCategories = [
