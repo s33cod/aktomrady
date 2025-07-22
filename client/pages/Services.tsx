@@ -59,12 +59,12 @@ export default function Services() {
     },
     {
       id: "invitations",
-      title: "Wedding & Event Invitations",
+      title: "Invitation Cards",
       description:
         "Elegant invitations and event materials that set the perfect tone for your special occasions",
       icon: <Heart className="w-8 h-8" />,
       features: [
-        "Wedding Invitations",
+        "Invitation Cards",
         "Event Cards",
         "Save the Dates",
         "RSVP Cards",
@@ -206,7 +206,7 @@ export default function Services() {
               What We Offer
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From large format displays to intimate wedding invitations, we
+              From large format displays to intimate invitation cards, we
               provide end-to-end printing solutions for every need.
             </p>
           </div>
