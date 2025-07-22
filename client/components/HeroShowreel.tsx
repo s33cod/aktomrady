@@ -191,8 +191,12 @@ export default function HeroShowreel() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-4 hover:bg-white/20 transition-all duration-300 min-w-0"
               >
-                <div className="text-lg sm:text-2xl mb-1 sm:mb-2">{service.icon}</div>
-                <p className="text-white text-xs sm:text-sm font-medium break-words leading-tight">{service.text}</p>
+                <div className="text-lg sm:text-2xl mb-1 sm:mb-2">
+                  {service.icon}
+                </div>
+                <p className="text-white text-xs sm:text-sm font-medium break-words leading-tight">
+                  {service.text}
+                </p>
               </div>
             ))}
           </div>

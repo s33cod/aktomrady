@@ -38,7 +38,10 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+            <Link
+              to="/"
+              className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0"
+            >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fc8949a9c41674c51b868f14c9f5720b8%2F78846955ca544effb82359542fd12c89?format=webp&width=800"
                 alt="AKTOMRADY Agencies Logo"
@@ -210,8 +213,14 @@ export default function Layout({ children }: LayoutProps) {
                     asChild
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Link to="/quote" className="flex items-center justify-center space-x-2">
-                      <Calculator size={16} className="sm:w-[18px] sm:h-[18px]" />
+                    <Link
+                      to="/quote"
+                      className="flex items-center justify-center space-x-2"
+                    >
+                      <Calculator
+                        size={16}
+                        className="sm:w-[18px] sm:h-[18px]"
+                      />
                       <span>Get Quote</span>
                     </Link>
                   </Button>
@@ -256,22 +265,30 @@ export default function Layout({ children }: LayoutProps) {
               <div className="space-y-2 text-xs sm:text-sm">
                 <p className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
-                  <span className="truncate">Trusted by Lagos State Government</span>
+                  <span className="truncate">
+                    Trusted by Lagos State Government
+                  </span>
                 </p>
                 <p className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
-                  <span className="truncate">Serving Major Banks & Corporations</span>
+                  <span className="truncate">
+                    Serving Major Banks & Corporations
+                  </span>
                 </p>
                 <p className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
-                  <span className="truncate">3000+ Happy Clients Nationwide</span>
+                  <span className="truncate">
+                    3000+ Happy Clients Nationwide
+                  </span>
                 </p>
               </div>
             </div>
 
             {/* Contact Information */}
             <div className="min-w-0">
-              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Contact Info</h3>
+              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">
+                Contact Info
+              </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Phone Numbers:</p>
@@ -307,29 +324,43 @@ export default function Layout({ children }: LayoutProps) {
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Business Hours:</p>
-                  <p className="text-white text-xs sm:text-sm">Mon-Fri: 8:00 AM - 6:00 PM</p>
-                  <p className="text-white text-xs sm:text-sm">Sat: 9:00 AM - 4:00 PM</p>
+                  <p className="text-white text-xs sm:text-sm">
+                    Mon-Fri: 8:00 AM - 6:00 PM
+                  </p>
+                  <p className="text-white text-xs sm:text-sm">
+                    Sat: 9:00 AM - 4:00 PM
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Office Locations */}
             <div className="min-w-0">
-              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Our Offices</h3>
+              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">
+                Our Offices
+              </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <div>
                   <p className="text-gray-400 mb-1">Lagos Office:</p>
-                  <p className="text-white break-words">5, Kayode Street, Ogba</p>
-                  <p className="text-white break-words">Lagos Mainland, OGBA LAGOS</p>
+                  <p className="text-white break-words">
+                    5, Kayode Street, Ogba
+                  </p>
+                  <p className="text-white break-words">
+                    Lagos Mainland, OGBA LAGOS
+                  </p>
                   <p className="text-white">Nigeria</p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Abuja Office:</p>
-                  <p className="text-white text-xs sm:text-sm italic">Coming Soon</p>
+                  <p className="text-white text-xs sm:text-sm italic">
+                    Coming Soon
+                  </p>
                 </div>
                 <div>
                   <p className="text-gray-400 mb-1">Port Harcourt Office:</p>
-                  <p className="text-white text-xs sm:text-sm italic">Coming Soon</p>
+                  <p className="text-white text-xs sm:text-sm italic">
+                    Coming Soon
+                  </p>
                 </div>
               </div>
             </div>
