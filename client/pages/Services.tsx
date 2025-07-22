@@ -171,8 +171,9 @@ export default function Services() {
               </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Comprehensive printing solutions for businesses, events, and personal needs.
-              Trusted by government agencies, banks, and leading corporations across Nigeria.
+              Comprehensive printing solutions for businesses, events, and
+              personal needs. Trusted by government agencies, banks, and leading
+              corporations across Nigeria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2 text-brand-cyan">
