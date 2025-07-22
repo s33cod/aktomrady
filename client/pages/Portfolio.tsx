@@ -361,6 +361,63 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* International Clients Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              🌍 International Clients
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Extending our excellence beyond Nigeria's borders, serving clients across
+              continents with world-class printing solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {internationalClients.map((client, index) => (
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+              >
+                <CardHeader>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${client.color} flex items-center justify-center text-white mb-4`}
+                  >
+                    {client.icon}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-xl font-bold">
+                      {client.name}
+                    </CardTitle>
+                    <Badge variant="secondary">{client.category}</Badge>
+                  </div>
+                  <CardDescription className="text-gray-600">
+                    {client.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Key Projects:
+                    </h4>
+                    {client.projects.map((project, projectIndex) => (
+                      <div
+                        key={projectIndex}
+                        className="flex items-center text-sm text-gray-600"
+                      >
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {project}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio Categories */}
       <section
         className="py-20 bg-white bg-cover bg-center bg-no-repeat relative"
