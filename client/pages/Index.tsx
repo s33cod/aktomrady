@@ -150,7 +150,7 @@ export default function Index() {
                   "Annual cultural festival branding and promotional materials in Ogun State",
               },
               {
-                title: "🌍 Liberian Government",
+                title: "🌍 Liberian Clients",
                 category: "International",
                 description:
                   "Official government communications and printing services for Liberia",
