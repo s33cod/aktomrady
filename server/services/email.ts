@@ -103,7 +103,11 @@ export async function sendContactEmail(
     if (process.env.NODE_ENV !== "production") {
       const previewUrl = nodemailer.getTestMessageUrl(info);
       console.log("Preview URL:", previewUrl);
-      return { success: true, messageId: info.messageId, previewUrl };
+      return {
+        success: true,
+        messageId: info.messageId,
+        previewUrl: previewUrl || undefined
+      };
     }
 
     return { success: true, messageId: info.messageId };
