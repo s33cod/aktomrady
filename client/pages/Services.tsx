@@ -182,7 +182,7 @@ export default function Services() {
               </div>
               <div className="flex items-center gap-2 text-brand-yellow">
                 <Star size={20} />
-                <span className="font-semibold">Trusted by 1000+ Clients</span>
+                <span className="font-semibold">Trusted by 3000+ Clients</span>
               </div>
               <div className="flex items-center gap-2 text-brand-magenta">
                 <Clock size={20} />
