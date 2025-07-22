@@ -240,8 +240,8 @@ export default function Portfolio() {
 
   const testimonials = [
     {
-      name: "Lagos State Ministry of Information",
-      role: "Public Communications",
+      name: "LBSL- Lagos Bus Services Limited",
+      role: "Public Transportation",
       content:
         "AKTOMRADY has been instrumental in delivering high-quality printing solutions for our public awareness campaigns. Their attention to detail and timely delivery is exceptional.",
       rating: 5,
@@ -369,7 +369,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              🌍 International Clients
+              �� International Clients
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Extending our excellence beyond Nigeria's borders, serving clients
