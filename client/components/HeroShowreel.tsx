@@ -89,16 +89,16 @@ export default function HeroShowreel() {
   const currentImage = portfolioImages[currentSlide];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out w-full h-full"
           style={{
             backgroundImage: `url('${currentImage.url}')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 w-full h-full" />
 
         {/* Animated Brand Pattern Overlay */}
         <div className="absolute inset-0 opacity-20">
