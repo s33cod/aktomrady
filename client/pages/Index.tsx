@@ -275,7 +275,7 @@ export default function Index() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-brand-blue hover:bg-white/90 font-semibold px-8 py-3"
+            className="bg-gradient-to-r from-brand-cyan via-brand-magenta to-brand-yellow hover:from-brand-cyan/90 hover:via-brand-magenta/90 hover:to-brand-yellow/90 text-white font-semibold px-8 py-3"
             asChild
           >
             <Link to="/quote">Get Your Free Quote</Link>
