@@ -72,7 +72,7 @@ export default function Portfolio() {
       category: "Lagos State Agency",
       icon: <Building2 className="w-8 h-8" />,
       description:
-        "Special committee on school rehabilitation",
+        "Special Committee on Rehabilitation of Public Schools",
       projects: [
         "Registration Forms",
         "Pension Documents",
