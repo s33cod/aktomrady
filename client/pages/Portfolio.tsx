@@ -72,7 +72,7 @@ export default function Portfolio() {
       category: "Lagos State Agency",
       icon: <Building2 className="w-8 h-8" />,
       description:
-        "State Civil Registration and Pension Service - Official documentation and materials",
+        "Special committee on school rehabilitation",
       projects: [
         "Registration Forms",
         "Pension Documents",
