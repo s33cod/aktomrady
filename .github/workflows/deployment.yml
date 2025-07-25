@@ -1,0 +1,59 @@
+name: Deploy to cPanel
+
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build Vite app
+      run: npm run build
+
+    - name: Create deployment ZIP
+      run: |
+        mkdir -p upload
+        cd dist/spa
+        zip -r ../../upload/deploy.zip .
+        cd ../..
+
+    - name: List upload contents
+      run: |
+        echo "Listing files in ./upload"
+        ls -lh ./upload
+        echo "ZIP file contents:"
+        unzip -l ./upload/deploy.zip
+
+    - name: Call extract.php to delete deploy.zip
+      run: |
+        echo "Calling extract.php to delete deploy.zip..."
+        response=$(curl -s -G "https://aktomrady.com/extract.php" \
+          --data-urlencode "action=delete" \
+          --data-urlencode "file=/home7/aktomrad/public_html/deploy.zip")
+        echo "Delete response: $response"
+
+    - name: Upload and deploy
+      run: |
+        curl -X POST "https://aktomrady.com/extract.php?action=upload&filename=deploy.zip&destination=/home7/aktomrad/public_html/" \
+          --data-binary @./upload/deploy.zip \
+          -H "Content-Type: application/octet-stream" \
+          -v
+        
