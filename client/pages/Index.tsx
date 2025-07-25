@@ -156,7 +156,7 @@ export default function Index() {
                   "Official government communications and printing services for Liberia",
               },
               {
-                title: "🇺🇸 American Clients",
+                title: "US American Clients",
                 category: "International",
                 description:
                   "Corporate printing solutions for US-based businesses and organizations",
