@@ -59,7 +59,6 @@ export async function sendContactEmail(
     const mailOptions = {
       from: `"AKTOMRADY Website" <${process.env.SMTP_USER || "noreply@aktomrady.com"}>`,
       to: "info@aktomrady.com",
-      cc: "admin@aktomrady.com", // CC to admin email
       subject: `[AKTOMRADY Website] ${emailData.subject}`,
       text: emailData.content,
       html: `
