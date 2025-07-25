@@ -19,6 +19,8 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
   app.post("/api/contact", handleContactForm);
+  app.get("/sitemap.xml", handleSitemapXML);
+  app.get("/api/sitemap", handleSitemapXML);
 
   return app;
 }
