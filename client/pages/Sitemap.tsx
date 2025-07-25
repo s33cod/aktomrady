@@ -25,62 +25,69 @@ interface SiteMapItem {
 
 export default function Sitemap() {
   const baseUrl = window.location.origin;
-  
+
   const siteMapItems: SiteMapItem[] = [
     {
       path: "/",
       title: "Home",
-      description: "Welcome to AKTOMRADY - Professional printing services in Lagos, Nigeria",
+      description:
+        "Welcome to AKTOMRADY - Professional printing services in Lagos, Nigeria",
       icon: <Home className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 1.0,
     },
     {
       path: "/services",
       title: "Our Services",
-      description: "Comprehensive printing services including large format prints, business cards, banners and more",
+      description:
+        "Comprehensive printing services including large format prints, business cards, banners and more",
       icon: <Settings className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.9,
     },
     {
       path: "/portfolio",
       title: "Portfolio",
-      description: "Browse our extensive portfolio of completed printing projects and success stories",
+      description:
+        "Browse our extensive portfolio of completed printing projects and success stories",
       icon: <Briefcase className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.8,
     },
     {
       path: "/about",
       title: "About Us",
-      description: "Learn about AKTOMRADY's history, mission, and commitment to quality printing",
+      description:
+        "Learn about AKTOMRADY's history, mission, and commitment to quality printing",
       icon: <Users className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.7,
     },
     {
       path: "/contact",
       title: "Contact Us",
-      description: "Get in touch with our team for inquiries, support, and consultations",
+      description:
+        "Get in touch with our team for inquiries, support, and consultations",
       icon: <Phone className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.8,
     },
     {
       path: "/quote",
       title: "Get a Quote",
-      description: "Request a detailed quote for your printing project with our online form",
+      description:
+        "Request a detailed quote for your printing project with our online form",
       icon: <Calculator className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.8,
     },
     {
       path: "/privacy-policy",
       title: "Privacy Policy",
-      description: "Our commitment to protecting your privacy and personal information",
+      description:
+        "Our commitment to protecting your privacy and personal information",
       icon: <Shield className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.3,
     },
     {
@@ -88,7 +95,7 @@ export default function Sitemap() {
       title: "Terms of Service",
       description: "Terms and conditions for using our services and website",
       icon: <FileText className="w-5 h-5" />,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
       priority: 0.3,
     },
   ];
@@ -96,19 +103,23 @@ export default function Sitemap() {
   const generateXMLSitemap = () => {
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${siteMapItems.map(item => `  <url>
+${siteMapItems
+  .map(
+    (item) => `  <url>
     <loc>${baseUrl}${item.path}</loc>
     <lastmod>${item.lastModified}</lastmod>
     <priority>${item.priority}</priority>
     <changefreq>weekly</changefreq>
-  </url>`).join('\n')}
+  </url>`,
+  )
+  .join("\n")}
 </urlset>`;
-    
-    const blob = new Blob([xmlContent], { type: 'application/xml' });
+
+    const blob = new Blob([xmlContent], { type: "application/xml" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'sitemap.xml';
+    a.download = "sitemap.xml";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -133,7 +144,9 @@ ${siteMapItems.map(item => `  <url>
               </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Navigate through all pages and sections of our website. Find exactly what you're looking for with our comprehensive site directory.
+              Navigate through all pages and sections of our website. Find
+              exactly what you're looking for with our comprehensive site
+              directory.
             </p>
             <Button
               size="lg"
@@ -155,13 +168,17 @@ ${siteMapItems.map(item => `  <url>
               Website Navigation
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              All pages and sections organized for easy browsing and search engine optimization
+              All pages and sections organized for easy browsing and search
+              engine optimization
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {siteMapItems.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow group">
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow group"
+              >
                 <CardHeader>
                   <CardTitle className="flex items-center text-lg">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-brand-blue to-brand-light-blue flex items-center justify-center text-white mr-3">
@@ -210,8 +227,10 @@ ${siteMapItems.map(item => `  <url>
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 mb-6">
-                    Our XML sitemap helps search engines discover and index all pages on our website efficiently.
-                    It includes metadata about each page such as priority, last modification date, and update frequency.
+                    Our XML sitemap helps search engines discover and index all
+                    pages on our website efficiently. It includes metadata about
+                    each page such as priority, last modification date, and
+                    update frequency.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     <div>
@@ -234,11 +253,14 @@ ${siteMapItems.map(item => `  <url>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-3">For Developers & SEO</h3>
+                  <h3 className="text-lg font-semibold mb-3">
+                    For Developers & SEO
+                  </h3>
                   <p className="text-sm text-gray-600 mb-3">
-                    The XML sitemap follows the sitemaps.org protocol and includes:
+                    The XML sitemap follows the sitemaps.org protocol and
+                    includes:
                   </p>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Page URLs with absolute paths</li>

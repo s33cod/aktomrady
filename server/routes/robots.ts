@@ -2,8 +2,8 @@ import { Request, Response } from "express";
 
 export function handleRobotsTxt(req: Request, res: Response) {
   try {
-    const baseUrl = `${req.protocol}://${req.get('host')}`;
-    
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+
     const robotsTxt = `User-agent: *
 Allow: /
 
@@ -30,13 +30,13 @@ Crawl-delay: 1
 `;
 
     res.set({
-      'Content-Type': 'text/plain',
-      'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
+      "Content-Type": "text/plain",
+      "Cache-Control": "public, max-age=86400", // Cache for 24 hours
     });
-    
+
     return res.send(robotsTxt);
   } catch (error) {
-    console.error('Robots.txt generation error:', error);
-    return res.status(500).send('User-agent: *\nDisallow: /');
+    console.error("Robots.txt generation error:", error);
+    return res.status(500).send("User-agent: *\nDisallow: /");
   }
 }
