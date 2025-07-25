@@ -537,12 +537,12 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   Terms of Service
                 </Link>
-                <a
-                  href="#"
+                <Link
+                  to="/sitemap"
                   className="text-gray-400 hover:text-white transition-colors whitespace-nowrap"
                 >
                   Sitemap
-                </a>
+                </Link>
               </div>
             </div>
           </div>
