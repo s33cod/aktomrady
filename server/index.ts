@@ -3,6 +3,7 @@ import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleContactForm } from "./routes/contact";
 import { handleSitemapXML } from "./routes/sitemap";
+import { handleRobotsTxt } from "./routes/robots";
 
 export function createServer() {
   const app = express();
