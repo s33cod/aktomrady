@@ -1,14 +1,23 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Allow all crawlers access to sitemap
+Sitemap: https://aktomrady.com/sitemap.xml
+
+# Disallow crawling of API endpoints
+Disallow: /api/
+Disallow: /.netlify/
+
+# Allow crawling of all pages
+Allow: /
+Allow: /services
+Allow: /portfolio
+Allow: /about
+Allow: /contact
+Allow: /quote
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /sitemap
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1
