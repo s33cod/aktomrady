@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
