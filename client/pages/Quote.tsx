@@ -61,7 +61,7 @@ export default function Quote() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/quote-request-api.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
